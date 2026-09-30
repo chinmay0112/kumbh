@@ -5,9 +5,11 @@
   background: #f7f3eb;
   color-scheme: light;
 }
+
 * {
   box-sizing: border-box !important;
 }
+
 body {
   font-family: inherit;
   color: inherit;
@@ -16,26 +18,37 @@ body {
   min-height: 100svh;
   background: #f8f3eb;
 }
+
 button,
 input {
   font: inherit;
 }
+
+.nl-badge {
+  display: none !important;
+}
+
+
 button {
   cursor: pointer;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
   outline: 2px solid #9b391c;
   outline-offset: 5px;
 }
+
 [hidden] {
   display: none !important;
 }
+
 .site-header {
   position: relative;
   /* Match the hero's starting color so the gradient does not restart here. */
@@ -45,14 +58,17 @@ input:focus-visible {
 
   height: clamp(100px, 11.8vw, 164px);
 }
+
 .brand img {
   display: block;
   width: clamp(86px, 10vw, 140px);
   height: auto;
 }
+
 .header-actions {
   gap: 20px;
 }
+
 .icon-button {
   display: grid;
   place-items: center;
@@ -63,6 +79,7 @@ input:focus-visible {
   border: 0;
   color: inherit;
 }
+
 .icon-button svg {
   width: 17px;
   height: 17px;
@@ -70,6 +87,7 @@ input:focus-visible {
   stroke: currentColor;
   stroke-width: 1.3;
 }
+
 .language-button {
   padding: 3px 9px;
   border: 1px solid #e4d9c9;
@@ -77,6 +95,7 @@ input:focus-visible {
   color: #655d52;
   font-size: 10px;
 }
+
 .hero {
   margin: auto;
   row-gap: 30px;
@@ -90,6 +109,7 @@ input:focus-visible {
   margin: 0 0 10px;
   line-height: 1.5;
 }
+
 h1 {
   font-size: clamp(44px, 5.2vw, 75px);
   line-height: 1.195;
@@ -97,9 +117,11 @@ h1 {
   font-weight: 400;
   margin: 0 0 24px;
 }
+
 h1 span {
   display: block;
 }
+
 .intro {
   max-width: 440px;
   font-size: clamp(10px, 1.18vw, 17px);
@@ -107,9 +129,11 @@ h1 span {
   color: #55514b;
   margin: 0 0 17px;
 }
+
 .hero-actions {
   gap: 10px;
 }
+
 .button {
   border-radius: 0;
   --bs-btn-active-border-color: transparent;
@@ -125,6 +149,7 @@ h1 span {
   line-height: 1;
   transition: background 0.2s;
 }
+
 .primary {
   --bs-btn-hover-color: white;
   --bs-btn-active-color: white;
@@ -134,9 +159,11 @@ h1 span {
 
   font-weight: 700;
 }
+
 .primary:hover {
   background: #df6010;
 }
+
 .secondary {
   --bs-btn-hover-color: #3d3933;
   --bs-btn-hover-border-color: #dedbd2;
@@ -145,9 +172,11 @@ h1 span {
   border-color: #dedbd2;
   color: #3d3933;
 }
+
 .secondary:hover {
   background: #fff7e9;
 }
+
 .play {
   width: 0;
   height: 0;
@@ -155,6 +184,7 @@ h1 span {
   border-bottom: 5px solid transparent;
   border-left: 8px solid white;
 }
+
 .hero-visual {
   position: relative;
   min-height: 348px;
@@ -163,6 +193,7 @@ h1 span {
   isolation: isolate;
   background: #b3876c;
 }
+
 .hero-video {
   position: absolute;
   inset: 0;
@@ -170,19 +201,21 @@ h1 span {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  /* GPU layer: parallax scroll animation uses transform, promote to compositor */
+  will-change: transform;
 }
+
 .hero-visual::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    #c2875a15 0%,
-    #a6473438 40%,
-    #740b09df 100%
-  );
+  background: linear-gradient(180deg,
+      #c2875a15 0%,
+      #a6473438 40%,
+      #740b09df 100%);
   pointer-events: none;
 }
+
 .video-button {
   position: absolute;
   z-index: 1;
@@ -202,9 +235,11 @@ h1 span {
   font-size: clamp(7px, 0.8vw, 11px);
   font-weight: 700;
 }
+
 .video-button:hover {
   background: #ffffff30;
 }
+
 .video-button svg {
   width: 13px;
   height: 16px;
@@ -212,6 +247,7 @@ h1 span {
   stroke: currentColor;
   stroke-width: 1.5;
 }
+
 .panel {
   position: absolute;
   z-index: 5;
@@ -224,11 +260,13 @@ h1 span {
   box-shadow: 0 12px 35px #50381915;
   font-size: 13px;
 }
+
 .menu {
   display: grid;
   gap: 18px;
   min-width: 200px;
 }
+
 .menu button {
   padding: 0;
   background: none;
@@ -236,19 +274,23 @@ h1 span {
   text-align: left;
   color: inherit;
 }
+
 .panel label {
   display: block;
   margin-bottom: 10px;
 }
+
 .panel input {
   padding: 8px;
   border: 1px solid #ded2bf;
   width: 200px;
   max-width: 50vw;
 }
+
 .panel p:empty {
   display: none;
 }
+
 dialog {
   border: 0;
   border-radius: 16px;
@@ -258,10 +300,12 @@ dialog {
   width: min(900px, 92vw);
   max-height: 90svh;
 }
+
 dialog::backdrop {
   background: #20160edb;
   backdrop-filter: blur(5px);
 }
+
 .close {
   position: absolute;
   top: 10px;
@@ -275,87 +319,109 @@ dialog::backdrop {
   color: #33251d;
   font-size: 25px;
 }
+
 dialog video {
   display: block;
   width: 100%;
   max-height: 85svh;
 }
+
 .plan-dialog {
   width: min(520px, 92vw);
   padding: 40px;
   background: #fff7eb;
 }
+
 .plan-dialog h2 {
   font-size: 32px;
   font-weight: 400;
   margin: 15px 0;
 }
+
 .plan-dialog p {
   font-size: 14px;
   line-height: 1.8;
 }
+
 @media (min-width: 1100px) {
   h1 {
     margin-bottom: 32px;
   }
+
   .intro {
     margin-bottom: 25px;
   }
+
   .button {
     padding: 12px 18px;
   }
+
   .hero-visual {
     border-radius: 30px;
   }
 }
+
 @media (max-width: 767.98px) {
   .site-header {
     height: 100px;
   }
+
   .header-actions {
     gap: 18px;
   }
+
   .hero {
     row-gap: 30px;
     padding: 14px 0 32px;
   }
+
   .hero-copy {
     padding: 0;
   }
+
   .eyebrow {
     font-size: 10px;
   }
+
   h1 {
     font-size: clamp(42px, 10vw, 62px);
     margin-bottom: 22px;
   }
+
   h1 span {
     display: inline;
   }
+
   h1 span::after {
     content: " ";
   }
+
   .intro {
     font-size: 14px;
     max-width: 370px;
     margin-bottom: 22px;
   }
+
   .button {
     font-size: 8px;
     padding: 12px 14px;
   }
+
   .hero-visual {
     min-height: 350px;
     aspect-ratio: 1.15;
   }
+
   .video-button {
     font-size: 9px;
     padding: 12px 20px;
   }
+
   .plan-dialog {
     padding: 35px 25px;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
@@ -366,31 +432,39 @@ dialog video {
 html:lang(hi) {
   font-family: "Nirmala UI", "Mangal", Arial, sans-serif;
 }
+
 html:lang(hi) h1 {
   font-size: clamp(36px, 4.3vw, 62px);
   line-height: 1.4;
 }
+
 html:lang(hi) .button,
 html:lang(hi) .eyebrow {
   letter-spacing: 0;
 }
+
 html:lang(hi) .button {
   font-size: 12px;
   line-height: 1.5;
 }
+
 html:lang(hi) .journey-heading {
   flex-wrap: wrap;
 }
+
 html:lang(hi) .journey-intro {
   flex-shrink: 1;
   max-width: 360px;
 }
+
 html:lang(hi) .journey-card h3 {
   line-height: 1.6;
 }
+
 html:lang(hi) .journey-card p {
   line-height: 1.8;
 }
+
 html:lang(hi) .journey-tags li {
   font-size: 11px;
   line-height: 1.5;
@@ -410,10 +484,12 @@ html:lang(hi) .journey-tags li {
   gap: 32px;
   margin-bottom: 34px;
 }
+
 .journey-heading .eyebrow {
   margin-bottom: 6px;
   font-size: clamp(9px, 1vw, 13px);
 }
+
 .journey-heading h2 {
   margin: 0;
   font-size: clamp(30px, 3.85vw, 54px);
@@ -421,6 +497,7 @@ html:lang(hi) .journey-tags li {
   font-weight: 400;
   letter-spacing: -0.02em;
 }
+
 .journey-intro {
   margin: 0;
   flex-shrink: 0;
@@ -428,10 +505,12 @@ html:lang(hi) .journey-tags li {
   line-height: 1.5;
   color: #55514b;
 }
+
 .journey-grid {
   --bs-gutter-x: 14px;
   --bs-gutter-y: 14px;
 }
+
 .journey-card {
   min-width: 0;
   padding: 14px;
@@ -439,9 +518,11 @@ html:lang(hi) .journey-tags li {
   border-radius: 16px;
   background: linear-gradient(154.18deg, #ffffff 45%, #f0aa31 203.04%);
 }
+
 .journey-card-main {
   gap: 10px;
 }
+
 .journey-card-main img {
   display: block;
   flex-shrink: 0;
@@ -453,6 +534,7 @@ html:lang(hi) .journey-tags li {
   border-radius: 9px;
   background: #eadbc3;
 }
+
 .journey-card h3 {
   margin: 0 0 6px;
   font-size: clamp(11px, 1.2vw, 17px);
@@ -460,17 +542,20 @@ html:lang(hi) .journey-tags li {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+
 .journey-card p {
   margin: 0;
   font-size: clamp(9px, 0.98vw, 14px);
   line-height: 1.45;
   color: #514d47;
 }
+
 .journey-tags {
   gap: 6px;
   padding: 0;
   margin: 18px 0 7px;
 }
+
 .journey-tags li {
   border: 1px solid #e9e2d5;
   border-radius: 30px;
@@ -481,38 +566,47 @@ html:lang(hi) .journey-tags li {
   background: #ffffff40;
   white-space: nowrap;
 }
+
 .journey-action {
   text-align: center;
   margin-top: 24px;
 }
+
 .journey-cta {
   min-height: 32px;
   padding: 11px 24px;
   gap: 10px;
   font-size: clamp(9px, 1vw, 12px);
 }
+
 @media (min-width: 1100px) {
   .journey {
     padding-block: 44px 32px;
   }
+
   .journey-grid {
     --bs-gutter-x: 22px;
     --bs-gutter-y: 22px;
   }
+
   .journey-card {
     padding: 20px;
   }
+
   .journey-card-main {
     gap: 16px;
   }
+
   .journey-tags {
     margin-top: 24px;
     gap: 8px;
   }
+
   .journey-tags li {
     padding: 6px 9px;
   }
 }
+
 @media (max-width: 767.98px) {
   .journey-heading {
     align-items: flex-start;
@@ -520,49 +614,63 @@ html:lang(hi) .journey-tags li {
     gap: 14px;
     margin-bottom: 26px;
   }
+
   .journey-intro {
     font-size: 14px;
     flex-shrink: 1;
     max-width: 360px;
   }
+
   .desktop-break {
     display: none;
   }
+
   .journey-card h3 {
     font-size: 13px;
   }
+
   .journey-card p {
     font-size: 10px;
   }
+
   .journey-tags li {
     font-size: 9px;
   }
 }
+
 @media (max-width: 575.98px) {
   .journey {
     padding-block: 28px;
   }
+
   .journey-card {
     padding: 16px;
   }
+
   .journey-card-main {
     gap: 16px;
   }
+
   .journey-card-main img {
     width: 86px;
   }
+
   .journey-card h3 {
     font-size: 15px;
   }
+
   .journey-card p {
     font-size: 12px;
   }
+
   .journey-tags {
     margin-bottom: 2px;
   }
+
   .journey-tags li {
     font-size: 10px;
   }
+
   .journey-cta {
     min-height: 42px;
   }
@@ -578,6 +686,7 @@ html:lang(hi) .journey-tags li {
   margin-bottom: 3px;
   font-size: clamp(9px, 1vw, 13px);
 }
+
 .ceremonies h2 {
   margin: 0 0 12px;
   font-size: clamp(30px, 3.85vw, 54px);
@@ -585,10 +694,12 @@ html:lang(hi) .journey-tags li {
   font-weight: 400;
   letter-spacing: -0.025em;
 }
+
 .ceremonies-toolbar {
   gap: 18px;
   margin-bottom: 26px;
 }
+
 .ceremonies-intro {
   max-width: 36%;
   margin: 0;
@@ -596,9 +707,11 @@ html:lang(hi) .journey-tags li {
   line-height: 1.85;
   color: #514d47;
 }
+
 .ceremony-filters {
   gap: 4px;
 }
+
 .ceremony-filter {
   --bs-btn-color: #7c1513;
   --bs-btn-hover-color: #7c1513;
@@ -615,16 +728,19 @@ html:lang(hi) .journey-tags li {
   font-weight: 700;
   letter-spacing: 0.12em;
 }
+
 .ceremony-filter:focus-visible {
   outline: 2px solid #7c1513;
   outline-offset: 3px;
   box-shadow: none;
 }
+
 .ceremony-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .ceremony-row {
   min-height: 61px;
   margin: 0;
@@ -632,11 +748,13 @@ html:lang(hi) .journey-tags li {
   border: 1px solid #eae5da;
   border-radius: 17px;
 }
+
 .ceremony-date {
   position: relative;
   padding-left: 15px;
   padding-right: 10px;
 }
+
 .ceremony-date::before {
   content: "";
   position: absolute;
@@ -647,18 +765,21 @@ html:lang(hi) .journey-tags li {
   border-radius: 4px;
   background: #ff7b18;
 }
+
 .ceremony-category {
   margin: 0 0 6px;
   font-size: clamp(9px, 0.97vw, 13px);
   line-height: 1.1;
   color: #861a16;
 }
+
 .ceremony-day {
   margin: 0;
   font-size: 0.88em;
   line-height: 1.3;
   font-weight: 700;
 }
+
 .ceremony-row h3 {
   margin: 0;
   padding-inline: 24px 14px;
@@ -667,6 +788,7 @@ html:lang(hi) .journey-tags li {
   line-height: 1.4;
   letter-spacing: -0.025em;
 }
+
 .ceremony-description {
   margin: 0;
   padding-left: 4px;
@@ -674,66 +796,83 @@ html:lang(hi) .journey-tags li {
   line-height: 1.6;
   color: #413d38;
 }
+
 html:lang(hi) .ceremony-filter {
   font-size: 11px;
   letter-spacing: 0;
   line-height: 1.6;
 }
+
 html:lang(hi) .ceremony-category,
 html:lang(hi) .ceremony-day {
   line-height: 1.6;
 }
+
 html:lang(hi) .ceremonies-intro {
   max-width: 420px;
 }
+
 @media (min-width: 1100px) {
   .ceremonies {
     padding-block: 44px 60px;
   }
+
   .ceremony-row {
     padding: 22px 32px;
   }
+
   .ceremony-list {
     gap: 14px;
   }
+
   .ceremonies-toolbar {
     margin-bottom: 34px;
   }
 }
+
 @media (max-width: 767.98px) {
   .ceremonies-intro {
     max-width: 100%;
     font-size: 13px;
   }
+
   .ceremony-filter {
     font-size: 8px;
     padding: 10px 12px;
   }
+
   .ceremony-row {
     row-gap: 14px;
     padding: 18px;
   }
+
   .ceremony-description {
     padding-left: 15px;
     font-size: 12px;
   }
+
   .ceremony-row h3 {
     font-size: 15px;
   }
+
   .ceremony-category {
     font-size: 10px;
   }
+
   .ceremony-day {
     font-size: 10px;
   }
 }
+
 @media (max-width: 575.98px) {
   .ceremony-row h3 {
     padding-left: 15px;
   }
+
   .ceremonies h2 {
     font-size: 32px;
   }
+
   .ceremony-filters {
     gap: 6px;
   }
@@ -748,10 +887,12 @@ html:lang(hi) .ceremonies-intro {
 .highlights-heading {
   margin-bottom: 32px;
 }
+
 .highlights-heading .eyebrow {
   font-size: clamp(8px, 0.9vw, 12px);
   margin-bottom: 4px;
 }
+
 .highlights-heading h2 {
   margin: 0 0 8px;
   font-size: clamp(30px, 3.7vw, 52px);
@@ -759,19 +900,24 @@ html:lang(hi) .ceremonies-intro {
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
-.highlights-heading > p:last-child {
+
+.highlights-heading>p:last-child {
   margin: 0 auto;
   max-width: 840px;
   font-size: clamp(10px, 1.05vw, 15px);
   line-height: 1.7;
 }
+
 .highlights-grid {
   --bs-gutter-x: 16px;
   --bs-gutter-y: 16px;
 }
+
 .highlight-card {
   position: relative;
   isolation: isolate;
+  /* Contain layout & paint to avoid full-page repaints on scroll */
+  contain: layout paint;
   overflow: hidden;
   border: 0;
   border-radius: 18px;
@@ -779,27 +925,28 @@ html:lang(hi) .ceremonies-intro {
   aspect-ratio: 1.04;
   color: #fff;
 }
-.highlight-card > img {
+
+.highlight-card>img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .highlight-card::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(
-    180deg,
-    #18120a25 0%,
-    #18120a00 30%,
-    #17140f50 55%,
-    #17140fed 100%
-  );
+  background: linear-gradient(180deg,
+      #18120a25 0%,
+      #18120a00 30%,
+      #17140f50 55%,
+      #17140fed 100%);
   pointer-events: none;
 }
+
 .highlight-label {
   position: relative;
   z-index: 1;
@@ -810,69 +957,85 @@ html:lang(hi) .ceremonies-intro {
   color: #ffda49;
   text-shadow: 0 1px 5px #302009;
 }
+
 .highlight-copy {
   position: relative;
   z-index: 1;
   margin-top: auto;
   padding: 16px;
 }
+
 .highlight-copy h3 {
   margin: 0 0 8px;
   font-size: clamp(15px, 1.55vw, 22px);
   line-height: 1.35;
   font-weight: 700;
 }
+
 .highlight-copy p {
   margin: 0;
   color: #e3ded5;
   font-size: clamp(10px, 1.08vw, 15px);
   line-height: 1.55;
 }
+
 .highlights-action {
   margin-top: 30px;
 }
+
 .highlights-cta {
   padding: 13px 18px;
   min-height: 34px;
   font-size: clamp(8px, 0.9vw, 12px);
   letter-spacing: 0.025em;
 }
+
 html:lang(hi) .highlight-label,
 html:lang(hi) .highlight-copy p {
   line-height: 1.8;
 }
+
 html:lang(hi) .highlight-card {
   min-height: 300px;
 }
+
 @media (max-width: 767.98px) {
   .highlight-card {
     min-height: 285px;
   }
+
   .highlights-heading {
     margin-bottom: 24px;
   }
-  .highlights-heading > p:last-child {
+
+  .highlights-heading>p:last-child {
     font-size: 12px;
   }
+
   .highlight-copy p {
     font-size: 12px;
   }
 }
+
 @media (max-width: 575.98px) {
   .highlight-card {
     aspect-ratio: 1.08;
     min-height: 310px;
   }
+
   .highlight-copy {
     padding: 20px;
   }
+
   .highlight-copy h3 {
     font-size: 19px;
   }
+
   .highlight-label {
     padding: 18px 20px;
     font-size: 11px;
   }
+
   .highlights-cta {
     min-height: 42px;
     font-size: 9px;
@@ -892,10 +1055,12 @@ html:lang(hi) .highlight-card {
   font-weight: 400;
   letter-spacing: -0.025em;
 }
+
 .numbers-grid {
   --bs-gutter-x: 16px;
   --bs-gutter-y: 16px;
 }
+
 .number-card {
   position: relative;
   isolation: isolate;
@@ -908,6 +1073,7 @@ html:lang(hi) .highlight-card {
   border-radius: 16px;
   color: #fff;
 }
+
 .number-card::before {
   content: "";
   position: absolute;
@@ -919,11 +1085,13 @@ html:lang(hi) .highlight-card {
   border-radius: 50%;
   background: #f58e3f;
 }
+
 .number-copy {
   position: relative;
   z-index: 1;
   max-width: 70%;
 }
+
 .number-value {
   margin: 0 0 12px;
   font-size: clamp(34px, 4.4vw, 64px);
@@ -932,12 +1100,14 @@ html:lang(hi) .highlight-card {
   letter-spacing: -0.035em;
   font-variant-numeric: tabular-nums;
 }
+
 .number-label {
   margin: 0;
   font-size: clamp(10px, 1.08vw, 15px);
   line-height: 1.5;
   color: #ffffffd9;
 }
+
 .number-icon {
   position: absolute;
   right: 11%;
@@ -949,36 +1119,46 @@ html:lang(hi) .highlight-card {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+
 .number-pilgrims {
   background: #f57d20;
 }
+
 .number-akharas {
   background: #681212;
 }
+
 .number-akharas::before {
   background: #0000001a;
 }
+
 .number-days {
   background: #1c1a17;
 }
+
 .number-days::before {
   background: #0e0c0b;
 }
+
 .number-ghats {
   background: #49baeb;
 }
+
 .number-ghats::before {
   right: -32%;
   top: -25%;
   background: #d6d6d64d;
 }
+
 .number-footfall {
   background: #735032;
 }
+
 .number-footfall::before {
   display: none;
 }
-.number-footfall > img {
+
+.number-footfall>img {
   position: absolute;
   z-index: -2;
   inset: 0;
@@ -987,6 +1167,7 @@ html:lang(hi) .highlight-card {
   object-fit: cover;
   object-position: center 60%;
 }
+
 .number-footfall::after {
   content: "";
   position: absolute;
@@ -994,43 +1175,53 @@ html:lang(hi) .highlight-card {
   inset: 0;
   background: linear-gradient(90deg, #26170688, #26170625);
 }
+
 .number-river {
   background: #ffd000;
 }
+
 .number-river::before {
   width: 74%;
   right: -9%;
   top: 12%;
   background: #ffffff40;
 }
+
 .number-river .number-icon {
   bottom: 21%;
   right: 19%;
 }
+
 html:lang(hi) .number-label {
   font-size: clamp(12px, 1.2vw, 17px);
   line-height: 1.6;
 }
+
 @media (max-width: 767.98px) {
   .important-numbers h2 {
     margin-bottom: 28px;
   }
+
   .numbers-grid {
     --bs-gutter-x: 12px;
     --bs-gutter-y: 12px;
   }
+
   .number-card {
     padding: 24px 12%;
     min-height: 135px;
   }
 }
+
 @media (max-width: 575.98px) {
   .number-card {
     min-height: 155px;
   }
+
   .number-value {
     font-size: 44px;
   }
+
   .number-label {
     font-size: 12px;
   }
@@ -1045,10 +1236,12 @@ html:lang(hi) .number-label {
 .cities-heading {
   margin-bottom: 44px;
 }
+
 .cities-heading .eyebrow {
   margin-bottom: 8px;
   font-size: clamp(8px, 0.9vw, 12px);
 }
+
 .cities-heading h2 {
   margin: 0;
   font-size: clamp(30px, 3.85vw, 54px);
@@ -1056,13 +1249,16 @@ html:lang(hi) .number-label {
   line-height: 1.3;
   letter-spacing: -0.025em;
 }
+
 .cities-heading h2 span {
   display: block;
 }
+
 .cities-grid {
   --bs-gutter-x: 18px;
   --bs-gutter-y: 18px;
 }
+
 .city-card {
   position: relative;
   isolation: isolate;
@@ -1075,26 +1271,27 @@ html:lang(hi) .number-label {
   background: #79674a;
   color: #fff;
 }
-.city-card > img {
+
+.city-card>img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .city-card::after {
   content: "";
   position: absolute;
   z-index: 0;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    #24100600 25%,
-    #48161225 48%,
-    #761512e8 100%
-  );
+  background: linear-gradient(180deg,
+      #24100600 25%,
+      #48161225 48%,
+      #761512e8 100%);
   pointer-events: none;
 }
+
 .city-name {
   position: relative;
   z-index: 1;
@@ -1106,22 +1303,26 @@ html:lang(hi) .number-label {
   letter-spacing: 0.08em;
   text-shadow: 0 1px 5px #493318;
 }
+
 .city-copy {
   position: relative;
   z-index: 1;
   margin-top: auto;
   padding: 18px;
 }
+
 .city-copy h3 {
   margin: 0 0 14px;
   font-size: clamp(17px, 1.9vw, 27px);
   line-height: 1.35;
   font-weight: 700;
 }
+
 .city-tags {
   gap: 6px;
   margin: 0;
 }
+
 .city-tags li {
   padding: 6px 8px;
   border: 1px solid #ffffff35;
@@ -1131,25 +1332,31 @@ html:lang(hi) .number-label {
   letter-spacing: 0.1em;
   background: #ffffff08;
 }
+
 html:lang(hi) .city-name,
 html:lang(hi) .city-tags li {
   letter-spacing: 0;
   font-size: 11px;
   line-height: 1.6;
 }
+
 @media (max-width: 767.98px) {
   .cities-heading {
     margin-bottom: 28px;
   }
+
   .city-card {
     min-height: 260px;
   }
+
   .city-tags li {
     font-size: 8px;
   }
+
   .city-name {
     font-size: 10px;
   }
+
   .city-copy h3 {
     font-size: 22px;
   }
@@ -1165,10 +1372,12 @@ html:lang(hi) .city-tags li {
   gap: 20px;
   margin-bottom: 36px;
 }
+
 .stories-heading .eyebrow {
   margin-bottom: 9px;
   font-size: clamp(8px, 0.9vw, 12px);
 }
+
 .stories-heading h2 {
   margin: 0;
   font-size: clamp(29px, 3.85vw, 54px);
@@ -1176,6 +1385,7 @@ html:lang(hi) .city-tags li {
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
+
 .stories-intro {
   width: 23%;
   margin: 0;
@@ -1183,11 +1393,13 @@ html:lang(hi) .city-tags li {
   line-height: 1.55;
   color: #55514b;
 }
+
 .stories-grid {
   --bs-gutter-x: 22px;
   --bs-gutter-y: 30px;
 }
-.story-card > img {
+
+.story-card>img {
   display: block;
   width: 100%;
   height: auto;
@@ -1196,12 +1408,14 @@ html:lang(hi) .city-tags li {
   border-radius: 18px;
   background: #c6af91;
 }
+
 .story-category {
   margin: 13px 0 8px;
   font-size: clamp(8px, 0.94vw, 13px);
   line-height: 1.4;
   color: #514d47;
 }
+
 .story-card h3 {
   margin: 0 0 10px;
   font-size: clamp(12px, 1.35vw, 19px);
@@ -1209,12 +1423,14 @@ html:lang(hi) .city-tags li {
   line-height: 1.4;
   letter-spacing: -0.02em;
 }
+
 .story-excerpt {
   margin: 0 0 8px;
   font-size: clamp(10px, 1.08vw, 15px);
   line-height: 1.55;
   color: #625c53;
 }
+
 .story-details summary {
   display: inline-flex;
   align-items: center;
@@ -1226,59 +1442,74 @@ html:lang(hi) .city-tags li {
   line-height: 1.6;
   cursor: pointer;
 }
+
 .story-details summary::-webkit-details-marker {
   display: none;
 }
+
 .story-details summary:hover {
   color: #a53c07;
 }
+
 .story-details summary:focus-visible {
   outline: 2px solid #9b391c;
   outline-offset: 5px;
 }
+
 .story-details[open] .story-arrow {
   transform: rotate(90deg);
 }
+
 .story-body {
   border-top: 1px solid #e5dacb;
   margin-top: 14px;
   padding-top: 14px;
 }
+
 .story-body p {
   color: #514d47;
   font-size: 14px;
   line-height: 1.8;
   margin: 0 0 12px;
 }
+
 html:lang(hi) .stories-intro {
   width: 27%;
 }
+
 html:lang(hi) .story-card h3,
 html:lang(hi) .story-excerpt {
   line-height: 1.8;
 }
+
 html:lang(hi) .story-details summary {
   font-size: 12px;
 }
+
 @media (max-width: 767.98px) {
   .stories-heading {
     margin-bottom: 26px;
   }
+
   .stories-intro,
   html:lang(hi) .stories-intro {
     width: 100%;
     max-width: 360px;
     font-size: 14px;
   }
+
   .story-card h3 {
     font-size: 19px;
   }
+
   .story-category {
     font-size: 10px;
   }
+
   .story-excerpt {
     font-size: 14px;
   }
+
   .story-details summary {
     min-height: 36px;
     font-size: 11px;
@@ -1295,6 +1526,7 @@ html:lang(hi) .story-details summary {
   gap: 22px;
   margin-bottom: 36px;
 }
+
 .news-heading h2 {
   margin: 0;
   font-size: clamp(30px, 3.85vw, 54px);
@@ -1302,9 +1534,11 @@ html:lang(hi) .story-details summary {
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
+
 .news-filters {
   gap: 7px;
 }
+
 .news-filter {
   --bs-btn-color: #24221e;
   --bs-btn-hover-bg: #ede5d9;
@@ -1318,19 +1552,23 @@ html:lang(hi) .story-details summary {
 
   padding: 6px 13px;
 }
+
 .news-filter[data-news-filter="all"] {
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
+
 .news-list {
   overflow: hidden;
   border-radius: 20px;
   background: linear-gradient(160deg, #fff 40%, #fffaf2 72%, #fae6c5 100%);
 }
-.news-item + .news-item {
+
+.news-item+.news-item {
   border-top: 1px solid #e7e1d580;
 }
+
 .news-summary {
   min-height: 78px;
   padding: 20px;
@@ -1338,82 +1576,100 @@ html:lang(hi) .story-details summary {
   list-style: none;
   cursor: pointer;
 }
+
 .news-summary::-webkit-details-marker {
   display: none;
 }
+
 .news-summary:hover {
   background: #ffffff45;
 }
+
 .news-summary:focus-visible {
   outline: 2px solid #9b391c;
   outline-offset: -4px;
   border-radius: 8px;
 }
+
 .news-meta {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 7px;
 }
+
 .news-badge {
   border-radius: 30px;
   padding: 4px 9px;
   font-size: clamp(8px, 0.8vw, 11px);
   line-height: 1;
 }
+
 .badge-advisory {
   color: #9c7634;
   background: #faf1e2;
 }
+
 .badge-announcement {
   color: #ab4943;
   background: #fae3e3;
 }
+
 .badge-event {
   color: #4065a6;
   background: #e2eafd;
 }
+
 .news-meta time {
   font-size: clamp(8px, 0.8vw, 11px);
   color: #514d47;
 }
+
 .news-copy {
   padding-inline: 24px 16px;
 }
+
 .news-copy h3 {
   margin: 0 0 9px;
   font-size: clamp(12px, 1.15vw, 16px);
   font-weight: 700;
   line-height: 1.4;
 }
+
 .news-copy p {
   margin: 0;
   font-size: clamp(11px, 1.08vw, 15px);
   color: #57524b;
   line-height: 1.6;
 }
+
 .news-arrow {
   font-size: 29px;
   line-height: 1;
 }
+
 .news-item details[open] .news-arrow {
   transform: rotate(90deg);
   text-align: center !important;
 }
+
 .news-detail {
   padding: 0 10% 22px 12%;
   font-size: 14px;
   line-height: 1.7;
   color: #57524b;
 }
+
 .news-detail p {
   margin-bottom: 8px;
 }
+
 .news-detail a {
   color: #9b391c;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
 .news-empty {
   padding: 32px;
   margin: 0;
@@ -1421,51 +1677,65 @@ html:lang(hi) .story-details summary {
   text-align: center;
   font-size: 14px;
 }
+
 html:lang(hi) .news-badge,
 html:lang(hi) .news-filter {
   line-height: 1.6;
 }
+
 @media (min-width: 768px) {
   .news-meta {
     width: 10%;
   }
+
   .news-copy {
     width: 83.333333%;
   }
+
   .news-arrow {
     width: 6.666667%;
   }
 }
+
 @media (max-width: 767.98px) {
   .news-heading {
     margin-bottom: 26px;
   }
+
   .news-filter {
     min-height: 34px;
     padding-inline: 10px;
   }
+
   .news-summary {
     padding: 20px 14px;
   }
+
   .news-copy {
     padding-inline: 12px 8px;
   }
+
   .news-badge {
     padding-inline: 6px;
     font-size: 8px;
   }
+
   .news-meta time {
     font-size: 9px;
   }
+
   .news-copy h3 {
     font-size: 13px;
   }
+
   .news-copy p {
     font-size: 12px;
   }
+
   .news-arrow {
     font-size: 23px;
   }
+
   .news-detail {
     padding: 0 20px 20px;
   }
@@ -1486,9 +1756,11 @@ html:lang(hi) .news-filter {
 
   letter-spacing: -0.025em;
 }
+
 .help-links {
   gap: 12px;
 }
+
 .help-links a,
 .help-links button {
   display: inline-flex;
@@ -1504,41 +1776,49 @@ html:lang(hi) .news-filter {
   letter-spacing: 0.08em;
   text-decoration: none;
 }
+
 .help-links a:hover,
 .help-links button:hover {
   background: #ffffff15;
   border-color: #ffffff90;
 }
+
 .help-links a:focus-visible,
 .help-links button:focus-visible {
   outline: 2px solid #ffd990;
   outline-offset: 4px;
 }
+
 .help-question {
   margin-top: 22px;
   font-size: 17px;
   line-height: 1.5;
   font-weight: 700;
 }
+
 .help-tips {
   padding-left: 20px;
   font-size: 14px;
   line-height: 1.8;
 }
-.help-tips li + li {
+
+.help-tips li+li {
   margin-top: 10px;
 }
+
 .help-resource {
   color: #9b391c;
   text-decoration: underline;
   text-underline-offset: 3px;
   font-size: 14px;
 }
+
 html:lang(hi) .help-links a,
 html:lang(hi) .help-links button {
   letter-spacing: 0;
   line-height: 1.5;
 }
+
 @media (max-width: 767.98px) {
   .help-bar {
     padding-block: 24px;
@@ -1548,6 +1828,7 @@ html:lang(hi) .help-links button {
     width: 100%;
     gap: 10px;
   }
+
   .help-links a,
   .help-links button {
     min-height: 40px;
@@ -1561,6 +1842,7 @@ html:lang(hi) .help-links button {
   padding: 30px 0 18px;
   background: #f8f4ec;
 }
+
 .pilgrimage-banner {
   position: relative;
   isolation: isolate;
@@ -1572,6 +1854,7 @@ html:lang(hi) .help-links button {
   background: #936f55;
   color: #fff9ed;
 }
+
 .pilgrimage-banner-image {
   position: absolute;
   z-index: -2;
@@ -1581,23 +1864,24 @@ html:lang(hi) .help-links button {
   object-fit: cover;
   object-position: center 52%;
 }
+
 .pilgrimage-banner::before {
   content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    #7b382d22 0%,
-    #5b251a33 35%,
-    #711210d9 100%
-  );
+  background: linear-gradient(180deg,
+      #7b382d22 0%,
+      #5b251a33 35%,
+      #711210d9 100%);
 }
+
 .pilgrimage-banner-eyebrow {
   margin: 0 0 54px;
   font-size: clamp(11px, 1.2vw, 16px);
   line-height: 1.4;
 }
+
 .pilgrimage-banner h2 {
   margin: 0 0 34px;
   font-size: clamp(36px, 5.2vw, 74px);
@@ -1605,15 +1889,18 @@ html:lang(hi) .help-links button {
   font-weight: 400;
   letter-spacing: -0.025em;
 }
+
 .pilgrimage-banner h2 span {
   display: block;
 }
+
 .pilgrimage-banner-description {
   margin: 0 0 26px;
   font-size: clamp(12px, 1.2vw, 17px);
   line-height: 1.65;
   color: #f1ded3;
 }
+
 .pilgrimage-banner-button {
   min-height: 40px;
   padding: 14px 18px;
@@ -1621,32 +1908,40 @@ html:lang(hi) .help-links button {
   font-size: clamp(11px, 1.1vw, 15px);
   letter-spacing: 0;
 }
+
 .pilgrimage-banner-button:focus-visible {
   outline-color: #fff9ed;
 }
+
 html:lang(hi) .pilgrimage-banner h2 {
   line-height: 1.5;
 }
+
 @media (max-width: 767.98px) {
   .pilgrimage-banner-section {
     padding-block: 24px;
   }
+
   .pilgrimage-banner {
     padding: 28px 20px;
     min-height: 380px;
     border-radius: 20px;
   }
+
   .pilgrimage-banner-eyebrow {
     margin-bottom: 40px;
   }
+
   .pilgrimage-banner h2 {
     font-size: clamp(32px, 7vw, 46px);
     margin-bottom: 24px;
   }
+
   .pilgrimage-banner-description {
     max-width: 310px;
     font-size: 13px;
   }
+
   .pilgrimage-banner-button {
     min-height: 44px;
   }
@@ -1662,20 +1957,24 @@ html:lang(hi) .pilgrimage-banner h2 {
 .footer-main {
   --bs-gutter-x: 32px;
 }
+
 .footer-brand img {
   display: block;
   width: 105px;
   height: auto;
 }
+
 .footer-brand p {
   max-width: 265px;
   margin: 12px 0 22px;
   font-size: clamp(10px, 0.95vw, 14px);
   line-height: 1.75;
 }
+
 .footer-social {
   gap: 7px;
 }
+
 .footer-social button {
   display: inline-flex;
   align-items: center;
@@ -1688,26 +1987,31 @@ html:lang(hi) .pilgrimage-banner h2 {
   color: #303c50;
   background: transparent;
 }
+
 .footer-social button:disabled {
   cursor: default;
   opacity: 0.75;
 }
+
 .footer-social svg {
   width: 100%;
   height: 100%;
   fill: currentColor;
 }
+
 .footer-column h2 {
   margin: 0 0 16px;
   font-size: clamp(12px, 1.12vw, 16px);
   font-weight: 700;
   line-height: 1.4;
 }
+
 .footer-column ul {
   margin: 0;
   display: grid;
   gap: 17px;
 }
+
 .footer-column a,
 .footer-column button,
 .footer-legal a,
@@ -1720,6 +2024,7 @@ html:lang(hi) .pilgrimage-banner h2 {
   line-height: 1.4;
   text-align: left;
 }
+
 .footer-column a:hover,
 .footer-column button:hover,
 .footer-legal a:hover,
@@ -1728,37 +2033,45 @@ html:lang(hi) .pilgrimage-banner h2 {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
 .footer-bottom {
   gap: 20px;
   margin-top: 72px;
 }
+
 .footer-bottom p {
   margin: 0;
   font-size: clamp(10px, 0.9vw, 13px);
   line-height: 1.6;
 }
+
 .footer-legal {
   gap: 22px;
 }
+
 .sitemap-links {
   display: grid;
   gap: 16px;
   font-size: 15px;
 }
+
 .sitemap-links a {
   color: #9b391c;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
 [id] {
   scroll-margin-top: 24px;
 }
+
 html:lang(hi) .footer-column a,
 html:lang(hi) .footer-column button,
 html:lang(hi) .footer-legal a,
 html:lang(hi) .footer-legal button {
   line-height: 1.7;
 }
+
 @media (max-width: 767.98px) {
   .site-footer {
     padding-top: 30px;
@@ -1767,27 +2080,33 @@ html:lang(hi) .footer-legal button {
   .footer-brand {
     margin-bottom: 12px;
   }
+
   .footer-column h2 {
     font-size: 15px;
   }
+
   .footer-column a,
   .footer-column button,
   .footer-legal a,
   .footer-legal button {
     font-size: 13px;
   }
+
   .footer-brand p {
     font-size: 13px;
     max-width: 340px;
   }
+
   .footer-bottom {
     margin-top: 40px;
   }
+
   .footer-social button {
     width: 34px;
     height: 34px;
     padding: 9px;
   }
+
   .footer-legal {
     gap: 14px 20px;
   }
@@ -1800,17 +2119,20 @@ a:has(> .control-label) {
   align-items: center;
   justify-content: center;
 }
+
 .control-label {
   display: block;
   line-height: 1.2;
   transform: translateY(0.1em);
 }
+
 @supports (text-box: trim-both cap alphabetic) {
   .control-label {
     text-box: trim-both cap alphabetic;
     transform: none;
   }
 }
+
 /* Preserve room for Hindi vowel marks above and below the letters. */
 html:lang(hi) .control-label {
   line-height: 1.5;
@@ -1819,15 +2141,18 @@ html:lang(hi) .control-label {
 }
 
 /* All page edges follow the same Bootstrap container breakpoints. */
-.hero > .container > .row {
+.hero>.container>.row {
   row-gap: 30px;
 }
+
 .help-content {
   gap: 22px;
 }
+
 .pilgrimage-banner {
   width: 100%;
 }
+
 @media (max-width: 767.98px) {
   .help-content {
     gap: 18px;
@@ -1839,16 +2164,20 @@ html:lang(hi) .control-label {
   padding: 38px 0;
   background: #f8f4ec;
 }
+
 .sacred-journey-row {
   row-gap: 28px;
 }
+
 .sacred-journey-copy {
   padding-right: 7%;
 }
+
 .sacred-journey .eyebrow {
   margin-bottom: 12px;
   font-size: clamp(9px, 0.9vw, 13px);
 }
+
 .sacred-journey h2 {
   margin: 0 0 26px;
   font-size: 3.8em;
@@ -1856,27 +2185,32 @@ html:lang(hi) .control-label {
   font-weight: 500;
   letter-spacing: -0.025em;
 }
+
 .sacred-journey h2 span {
   display: block;
 }
+
 .sacred-journey-description {
   margin: 0 0 22px;
   color: #625c53;
   font-size: clamp(11px, 1.08vw, 15px);
   line-height: 1.9;
 }
+
 .sacred-journey-button {
   gap: 10px;
   min-height: 34px;
   padding: 12px 18px;
   font-size: clamp(8px, 0.8vw, 11px);
 }
+
 .sacred-journey-visual {
   overflow: hidden;
   border-radius: 22px;
   aspect-ratio: 1.48;
   background: #b99573;
 }
+
 .sacred-journey-visual img {
   display: block;
   width: 100%;
@@ -1884,28 +2218,35 @@ html:lang(hi) .control-label {
   object-fit: cover;
   object-position: center;
 }
+
 html:lang(hi) .sacred-journey h2 {
   line-height: 1.5;
 }
+
 @media (max-width: 767.98px) {
   .sacred-journey {
     padding-block: 30px;
   }
+
   .sacred-journey-copy {
     padding-right: 0;
   }
+
   .sacred-journey h2 {
     font-size: 36px;
     margin-bottom: 20px;
   }
+
   .sacred-journey-description {
     font-size: 14px;
     max-width: 520px;
   }
+
   .sacred-journey-button {
     min-height: 42px;
     font-size: 10px;
   }
+
   .sacred-journey-visual {
     border-radius: 18px;
   }
@@ -1925,12 +2266,14 @@ html:lang(hi) .sacred-journey h2 {
     0 4px 12px #492d1808;
   z-index: 20;
 }
+
 .search-panel-heading {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
 }
+
 #search-form .search-eyebrow {
   margin: 0 0 8px;
   font-size: 10px;
@@ -1938,6 +2281,7 @@ html:lang(hi) .sacred-journey h2 {
   color: #a34c22;
   font-weight: 600;
 }
+
 #search-form label {
   margin: 0;
   font-size: 25px;
@@ -1946,6 +2290,7 @@ html:lang(hi) .sacred-journey h2 {
   line-height: 1.3;
   color: #29241d;
 }
+
 .search-close {
   display: flex;
   justify-content: center;
@@ -1959,9 +2304,11 @@ html:lang(hi) .sacred-journey h2 {
   background: transparent;
   color: #6d5e4e;
 }
+
 .search-close:hover {
   background: #f0e5d6;
 }
+
 .search-close svg,
 .search-field-icon {
   fill: none;
@@ -1970,6 +2317,7 @@ html:lang(hi) .sacred-journey h2 {
   width: 18px;
   height: 18px;
 }
+
 #search-form .search-hint {
   margin: 12px 0 22px;
   max-width: 355px;
@@ -1977,6 +2325,7 @@ html:lang(hi) .sacred-journey h2 {
   line-height: 1.6;
   color: #817466;
 }
+
 .search-field {
   display: flex;
   align-items: center;
@@ -1989,14 +2338,17 @@ html:lang(hi) .sacred-journey h2 {
     border-color 0.2s,
     box-shadow 0.2s;
 }
+
 .search-field:focus-within {
   border-color: #d27735;
   box-shadow: 0 0 0 3px #f47d201a;
 }
+
 .search-field-icon {
   flex-shrink: 0;
   color: #9e8c75;
 }
+
 #search-form input {
   min-width: 0;
   width: 100%;
@@ -2011,9 +2363,11 @@ html:lang(hi) .sacred-journey h2 {
   outline: none;
   box-shadow: none;
 }
+
 #search-form input::placeholder {
   color: #a09282;
 }
+
 .search-submit {
   display: inline-flex;
   align-items: center;
@@ -2029,22 +2383,27 @@ html:lang(hi) .sacred-journey h2 {
   font-weight: 600;
   flex-shrink: 0;
 }
+
 .search-submit:hover {
   background: #d85e10;
 }
+
 .search-suggestions {
   margin-top: 22px;
 }
-.search-suggestions > p {
+
+.search-suggestions>p {
   margin: 0 0 10px;
   font-size: 10px;
   letter-spacing: 0.08em;
   font-weight: 600;
   color: #91816e;
 }
+
 .search-chips {
   gap: 8px;
 }
+
 .search-chips a {
   padding: 7px 11px;
   border: 1px solid #e6dbcc;
@@ -2054,11 +2413,13 @@ html:lang(hi) .sacred-journey h2 {
   line-height: 1.4;
   background: #f9f1e6;
 }
+
 .search-chips a:hover {
   color: #9b391c;
   border-color: #d5ab86;
   background: #f7e6d1;
 }
+
 #search-result:not(:empty) {
   margin: 18px 0 0;
   border-left: 3px solid #e69a54;
@@ -2069,6 +2430,7 @@ html:lang(hi) .sacred-journey h2 {
   font-size: 13px;
   line-height: 1.6;
 }
+
 #search-form .search-footer-note {
   margin: 22px 0 0;
   padding-top: 14px;
@@ -2076,33 +2438,41 @@ html:lang(hi) .sacred-journey h2 {
   color: #9d8f7f;
   font-size: 11px;
 }
+
 html:lang(hi) #search-form label {
   font-size: 23px;
   line-height: 1.5;
 }
+
 @media (max-width: 575.98px) {
   #search-form {
     right: 12px;
     padding: 20px;
   }
+
   #search-form label {
     font-size: 22px;
   }
+
   .search-field {
     gap: 7px;
     padding-left: 10px;
   }
+
   #search-form input {
     font-size: 13px;
   }
+
   .search-submit {
     padding-inline: 10px;
     font-size: 12px;
     gap: 5px;
   }
+
   .search-field-icon {
     width: 15px;
   }
+
   .search-chips a {
     min-height: 36px;
     display: inline-flex;
@@ -2117,18 +2487,18 @@ html:lang(hi) #search-form label {
   z-index: 1;
   pointer-events: none;
   opacity: 0;
-  background: linear-gradient(
-    110deg,
-    transparent 25%,
-    #ffe8bb08 40%,
-    #fff4d54d 50%,
-    transparent 65%
-  );
+  background: linear-gradient(110deg,
+      transparent 25%,
+      #ffe8bb08 40%,
+      #fff4d54d 50%,
+      transparent 65%);
   mix-blend-mode: screen;
 }
+
 .hero-visual .video-button {
   z-index: 2;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .hero-light-sweep {
     display: none;
@@ -2140,20 +2510,20 @@ html:lang(hi) #search-form label {
   position: relative;
   isolation: isolate;
 }
+
 .sacred-image-wash {
   position: absolute;
   inset: -20%;
   pointer-events: none;
   opacity: 0;
-  background: linear-gradient(
-    110deg,
-    transparent 25%,
-    #ffeac830 45%,
-    #fff4da80 52%,
-    transparent 72%
-  );
+  background: linear-gradient(110deg,
+      transparent 25%,
+      #ffeac830 45%,
+      #fff4da80 52%,
+      transparent 72%);
   mix-blend-mode: screen;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .sacred-image-wash {
     display: none;
@@ -2168,6 +2538,7 @@ html:lang(hi) #search-form label {
   color: #fff;
   font-size: 11px;
 }
+
 .accessibility-bar-inner {
   position: relative;
   display: flex;
@@ -2177,11 +2548,13 @@ html:lang(hi) #search-form label {
   min-height: 36px;
   padding-block: 12px;
 }
+
 .government-link {
   color: #fff;
   font-size: 12px;
   line-height: 1.5;
 }
+
 .accessibility-shortcuts {
   display: flex;
   align-items: center;
@@ -2189,6 +2562,7 @@ html:lang(hi) #search-form label {
   gap: 12px;
   flex-wrap: wrap;
 }
+
 .accessibility-pill {
   display: inline-flex;
   align-items: center;
@@ -2202,15 +2576,18 @@ html:lang(hi) #search-form label {
   font-size: 10px;
   line-height: 1.4;
 }
+
 .accessibility-pill:hover {
   background: #ffffff38;
   color: #fff;
 }
+
 .accessibility-tools {
   display: flex;
   flex-shrink: 0;
   align-items: center;
 }
+
 .accessibility-icon {
   display: inline-flex;
   align-items: center;
@@ -2223,9 +2600,11 @@ html:lang(hi) #search-form label {
   background: none;
   border: 0;
 }
-.accessibility-icon + .accessibility-icon {
+
+.accessibility-icon+.accessibility-icon {
   border-left: 1px solid #ffffff55;
 }
+
 .accessibility-icon svg {
   width: 20px;
   height: 20px;
@@ -2235,20 +2614,24 @@ html:lang(hi) #search-form label {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.accessibility-icon > span {
+
+.accessibility-icon>span {
   font-size: 15px;
   line-height: 1;
 }
+
 .language-icon-small {
   font-size: 11px;
   margin-left: 3px;
   vertical-align: sub;
 }
+
 .accessibility-bar a:focus-visible,
 .accessibility-bar button:focus-visible {
   outline: 2px solid #ffe49d;
   outline-offset: 3px;
 }
+
 .accessibility-settings {
   position: absolute;
   top: calc(100% + 8px);
@@ -2261,19 +2644,23 @@ html:lang(hi) #search-form label {
   background: #fff9ef;
   box-shadow: 0 15px 40px #32140830;
 }
+
 .accessibility-settings h2 {
   font-size: 20px;
   margin: 0 0 16px;
 }
+
 .accessibility-settings p {
   font-size: 14px;
   margin: 0 0 8px;
 }
+
 .accessibility-size-controls {
   display: flex;
   gap: 8px;
   margin-bottom: 12px;
 }
+
 .accessibility-settings button {
   min-height: 36px;
   padding: 8px 12px;
@@ -2283,22 +2670,26 @@ html:lang(hi) #search-form label {
   background: #fff;
   font-size: 13px;
 }
-.accessibility-settings > button {
+
+.accessibility-settings>button {
   display: block;
   width: 100%;
   margin-top: 8px;
 }
+
 .accessibility-settings button[aria-pressed="true"] {
   background: #701512;
   color: #fff;
   border-color: #701512;
 }
+
 #main-content:focus {
   outline: none;
 }
+
 .high-contrast body,
 .high-contrast header,
-.high-contrast main > section,
+.high-contrast main>section,
 .high-contrast footer,
 .high-contrast .panel,
 .high-contrast dialog,
@@ -2308,6 +2699,7 @@ html:lang(hi) #search-form label {
   background: #111 !important;
   color: #fff !important;
 }
+
 .high-contrast p,
 .high-contrast h1,
 .high-contrast h2,
@@ -2317,10 +2709,12 @@ html:lang(hi) #search-form label {
 .high-contrast time {
   color: #fff !important;
 }
+
 .high-contrast a,
 .high-contrast button {
   color: #ffeb8a !important;
 }
+
 .high-contrast button,
 .high-contrast input,
 .high-contrast .news-badge,
@@ -2329,39 +2723,48 @@ html:lang(hi) #search-form label {
   color: #fff !important;
   border: 1px solid #fff !important;
 }
+
 .high-contrast button[aria-pressed="true"] {
   background: #ffeb8a !important;
   color: #111 !important;
 }
+
 .high-contrast :focus-visible {
   outline: 3px solid #ffeb8a !important;
 }
+
 @media (max-width: 991.98px) {
   .accessibility-bar-inner {
     flex-wrap: wrap;
     gap: 6px 12px;
   }
+
   .accessibility-shortcuts {
     order: 3;
     flex-basis: 100%;
     padding-block: 3px;
     gap: 8px;
   }
+
   .accessibility-tools {
     margin-left: auto;
   }
 }
+
 @media (max-width: 575.98px) {
   .accessibility-bar {
     font-size: 10px;
   }
+
   .government-link {
     font-size: 11px;
   }
+
   .accessibility-pill {
     padding: 5px 9px;
     font-size: 9px;
   }
+
   .accessibility-icon {
     min-height: 32px;
   }
@@ -2757,18 +3160,22 @@ html:lang(hi) #search-form label {
     border-radius: 36px;
     gap: 8px;
   }
+
   .sticky-icon-wrapper {
     width: 40px;
     height: 40px;
     margin-bottom: 3px;
   }
+
   .sticky-icon-wrapper svg {
     width: 20px;
     height: 20px;
   }
+
   .sticky-label {
     font-size: 11px;
   }
+
   .sticky-sublabel {
     font-size: 9.5px;
   }
@@ -2782,20 +3189,23 @@ html:lang(hi) #search-form label {
     border-radius: 32px;
     gap: 6px;
   }
+
   .sticky-icon-wrapper {
     width: 36px;
     height: 36px;
     margin-bottom: 2px;
   }
+
   .sticky-icon-wrapper svg {
     width: 18px;
     height: 18px;
   }
+
   .sticky-label {
     font-size: 10px;
   }
+
   .sticky-sublabel {
     font-size: 8.5px;
   }
 }
-

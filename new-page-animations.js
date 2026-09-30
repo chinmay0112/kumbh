@@ -92,30 +92,8 @@
         scrollTrigger: { trigger: heroSection, start: 'top top', end: 'bottom top', scrub: 1.2 },
       });
     }
-    if (hover && playButton) {
-      // A small magnetic response without moving the card or its click target far away.
-      const moveX = gsap.quickTo(playButton, 'x', { duration: .45, ease: 'power3.out' });
-      const moveY = gsap.quickTo(playButton, 'y', { duration: .45, ease: 'power3.out' });
-      const move = event => {
-        if (hero.isActive()) return;
-        const bounds = visual.getBoundingClientRect();
-        const dx = event.clientX - (bounds.left + bounds.width / 2);
-        const dy = event.clientY - (bounds.top + bounds.height * .475);
-        moveX(gsap.utils.clamp(-16, 16, dx * .08));
-        moveY(gsap.utils.clamp(-12, 12, dy * .08));
-      };
-      const reset = () => { moveX(0); moveY(0); };
-      visual.addEventListener('pointermove', move);
-      visual.addEventListener('pointerleave', reset);
-      playButton.addEventListener('focus', reset);
-      playButton.addEventListener('click', reset);
-      cleanups.push(() => {
-        visual.removeEventListener('pointermove', move);
-        visual.removeEventListener('pointerleave', reset);
-        playButton.removeEventListener('focus', reset);
-        playButton.removeEventListener('click', reset);
-      });
-    }
+
+
 
     // Reversible journey choreography. Stable Bootstrap columns are the triggers;
     // only their contents move, so refreshes do not shift the scroll thresholds.
