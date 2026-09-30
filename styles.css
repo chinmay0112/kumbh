@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --scroll-distance: 4000px;
   --stage-height: 100vh;
   color-scheme: dark;
@@ -151,4 +151,22 @@ body {
 }
 .video-status:empty {
   display: none;
+}
+
+/* Hide Netlify "Powered by" attribution badge */
+.nl-badge,
+#netlify-badge,
+.netlify-badge,
+[data-netlify-badge],
+iframe[src*="netlify.com/badge"],
+a[href*="netlify.com"][target="_blank"][style],
+div[style*="netlify"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
