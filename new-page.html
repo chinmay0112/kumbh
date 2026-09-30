@@ -1,1576 +1,2379 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff0dc" />
+    <title>A Journey of Faith | Simhastha Kumbh</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#fff0dc" />
-  <title>A Journey of Faith | Simhastha Kumbh</title>
+    <!-- Preconnect to all external origins to reduce connection latency -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Preconnect to all external origins to reduce connection latency -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-  <link rel="preconnect" href="https://unpkg.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload critical font to avoid FOUT (flash of unstyled text) -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap"
+    />
 
-  <!-- Preload critical font to avoid FOUT (flash of unstyled text) -->
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" />
+    <!-- Critical CSS: Bootstrap and page styles load normally -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.26/dist/lenis.css"
+    />
+    <link rel="stylesheet" href="new-page.css" />
 
-  <!-- Critical CSS: Bootstrap and page styles load normally -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css" />
-  <link rel="stylesheet" href="new-page.css" />
+    <!-- Font: display=swap ensures text renders immediately with fallback -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- Font: display=swap ensures text renders immediately with fallback -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <div class="accessibility-bar">
-    <div class="container accessibility-bar-inner">
-      <a href="https://www.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer"
-        class="government-link">Government of Maharashtra</a>
-      <div class="accessibility-shortcuts">
-        <p class="accessibility-pill">
-          <span data-en="Last Updated:">Last Updated:</span>
-          <time datetime="2026-09-30" data-en="30 Sep 2026">30 Sep 2026</time>
-        </p>
-        <a class="accessibility-pill" href="#main-content" id="skip-main">Skip to Main Content</a>
-        <button class="accessibility-pill" type="button" data-help-dialog="screen-reader-dialog">
-          Screen Reader Access
-        </button>
-      </div>
-      <div class="accessibility-tools">
-        <a href="#site-footer" class="accessibility-icon" aria-label="Go to site navigation"><svg viewBox="0 0 24 24"
-            aria-hidden="true">
-            <path d="M8 4h13v16H8M11 8h6M11 12h6M11 16h6M2 12h7m-3-3 3 3-3 3" />
-          </svg></a>
-        <button class="accessibility-icon" id="top-language-toggle" type="button" aria-label="Change language">
-          <span aria-hidden="true">अ<span class="language-icon-small">A</span></span>
-        </button>
-        <button class="accessibility-icon" id="accessibility-toggle" type="button" aria-label="Accessibility settings"
-          aria-expanded="false" aria-controls="accessibility-settings">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="4" r="2" />
-            <path d="M4 8h16M12 7v7m0-4-5 10m5-6 5 6" />
-          </svg>
-        </button>
-      </div>
-      <div id="accessibility-settings" class="accessibility-settings" hidden>
-        <h2>Accessibility settings</h2>
-        <p>Page size</p>
-        <div class="accessibility-size-controls">
-          <button type="button" data-page-zoom="0.9" aria-label="Smaller page">
-            A−</button><button type="button" data-page-zoom="1" aria-label="Default page size" aria-pressed="true">
-            A</button><button type="button" data-page-zoom="1.15" aria-label="Larger page">
-            A+
+  <body>
+    <div class="accessibility-bar">
+      <div class="container accessibility-bar-inner">
+        <a
+          href="https://www.maharashtra.gov.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="government-link"
+          >Government of Maharashtra</a
+        >
+        <div class="accessibility-shortcuts">
+          <p class="accessibility-pill">
+            <span data-en="Last Updated:">Last Updated:</span>
+            <time datetime="2026-09-30" data-en="30 Sep 2026">30 Sep 2026</time>
+          </p>
+          <a class="accessibility-pill" href="#main-content" id="skip-main"
+            >Skip to Main Content</a
+          >
+          <button
+            class="accessibility-pill"
+            type="button"
+            data-help-dialog="screen-reader-dialog"
+          >
+            Screen Reader Access
           </button>
         </div>
-        <button type="button" id="contrast-toggle" aria-pressed="false">
-          High contrast
-        </button>
-        <button type="button" id="accessibility-reset">Reset settings</button>
+        <div class="accessibility-tools">
+          <a
+            href="#site-footer"
+            class="accessibility-icon"
+            aria-label="Go to site navigation"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M8 4h13v16H8M11 8h6M11 12h6M11 16h6M2 12h7m-3-3 3 3-3 3"
+              /></svg
+          ></a>
+          <button
+            class="accessibility-icon"
+            id="top-language-toggle"
+            type="button"
+            aria-label="Change language"
+          >
+            <span aria-hidden="true"
+              >अ<span class="language-icon-small">A</span></span
+            >
+          </button>
+          <button
+            class="accessibility-icon"
+            id="accessibility-toggle"
+            type="button"
+            aria-label="Accessibility settings"
+            aria-expanded="false"
+            aria-controls="accessibility-settings"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="4" r="2" />
+              <path d="M4 8h16M12 7v7m0-4-5 10m5-6 5 6" />
+            </svg>
+          </button>
+        </div>
+        <div id="accessibility-settings" class="accessibility-settings" hidden>
+          <h2>Accessibility settings</h2>
+          <p>Page size</p>
+          <div class="accessibility-size-controls">
+            <button
+              type="button"
+              data-page-zoom="0.9"
+              aria-label="Smaller page"
+            >
+              A−</button
+            ><button
+              type="button"
+              data-page-zoom="1"
+              aria-label="Default page size"
+              aria-pressed="true"
+            >
+              A</button
+            ><button
+              type="button"
+              data-page-zoom="1.15"
+              aria-label="Larger page"
+            >
+              A+
+            </button>
+          </div>
+          <button type="button" id="contrast-toggle" aria-pressed="false">
+            High contrast
+          </button>
+          <button type="button" id="accessibility-reset">Reset settings</button>
+        </div>
       </div>
     </div>
-  </div>
-  <header class="site-header d-flex align-items-center justify-content-between">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-      <a class="brand" href="index.html" aria-label="Simhastha Kumbh home"><img src="assets/logo-new-page.png"
-          alt="Simhastha Kumbh" /></a>
-      <div class="header-actions d-flex align-items-center">
-        <button class="icon-button" id="search-toggle" aria-label="Search" aria-expanded="false"
-          aria-controls="search-form">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="10.5" cy="10.5" r="6.5" />
-            <path d="m16 16 5 5" />
-          </svg>
-        </button>
-        <!-- <button
+    <header
+      class="site-header d-flex align-items-center justify-content-between"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <a class="brand" href="index.html" aria-label="Simhastha Kumbh home"
+          ><img src="assets/logo-new-page.png" alt="Simhastha Kumbh"
+        /></a>
+        <div class="header-actions d-flex align-items-center">
+          <button
+            class="icon-button"
+            id="search-toggle"
+            aria-label="Search"
+            aria-expanded="false"
+            aria-controls="search-form"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+          <!-- <button
             class="language-button"
             id="language-toggle"
             aria-label="Switch to Hindi"
           >
             <span class="control-label" data-en="हिंदी">हिंदी</span>
           </button> -->
-        <button class="icon-button" id="menu-toggle" aria-label="Open menu" aria-expanded="false"
-          aria-controls="site-menu">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 6h18M3 12h12M3 18h18" />
-          </svg>
-        </button>
-      </div>
-      <form id="search-form" class="panel search-panel" hidden role="search">
-        <div class="search-panel-heading">
-          <div>
-            <p class="search-eyebrow">YOUR KUMBH GUIDE</p>
-            <label for="search">What would you like to explore?</label>
-          </div>
-          <button class="search-close" type="button" aria-label="Close search">
+          <button
+            class="icon-button"
+            id="menu-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m6 6 12 12M18 6 6 18" />
+              <path d="M3 6h18M3 12h12M3 18h18" />
             </svg>
           </button>
         </div>
-        <p id="search-hint" class="search-hint">
-          Find your way to stories, sacred places and a memorable journey.
-        </p>
-        <div class="search-field">
-          <svg class="search-field-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="10.5" cy="10.5" r="6.5" />
-            <path d="m16 16 5 5" />
-          </svg>
-          <input id="search" type="search" placeholder="Try story or pilgrimage" aria-describedby="search-hint"
-            autocomplete="off" required />
-          <button class="search-submit" type="submit">
-            <span class="control-label" data-en="Search">Search</span><span aria-hidden="true">→</span>
-          </button>
-        </div>
-        <div class="search-suggestions">
-          <p>QUICK EXPLORE</p>
-          <div class="search-chips d-flex flex-wrap">
-            <a href="#plan-your-visit">Plan your pilgrimage</a><a href="#ceremonies">Calendar</a><a
-              href="#holy-cities">Sacred Places</a><a href="#featured-stories">Stories</a>
-          </div>
-        </div>
-        <p id="search-result" role="status" aria-live="polite"></p>
-        <p class="search-footer-note">Press Escape to close</p>
-      </form>
-      <nav id="site-menu" class="panel menu" hidden aria-label="Main navigation">
-        <a href="index.html">Home</a><button data-video>Watch the story</button><button data-plan>Plan your
-          pilgrimage</button>
-      </nav>
-    </div>
-  </header>
-  <main id="main-content" tabindex="-1">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="row g-0 m-0">
-          <div class="col-12 col-md-5">
-            <p class="eyebrow" data-en="A JOURNEY OF FAITH">
-              A JOURNEY OF FAITH
-            </p>
-            <h1 id="hero-title">
-              <span data-en="Where">Where</span><span data-en="Devotion">Devotion</span><span data-en="Meets the">Meets
-                the</span><span data-en="Sacred River">Sacred River</span>
-            </h1>
-            <p class="intro"
-              data-en="A timeless journey of faith, devotion and spiritual awakening on the sacred banks of the Godavari.">
-              A timeless journey of faith, devotion and spiritual awakening on
-              the sacred banks of the Godavari.
-            </p>
-            <div class="hero-actions d-flex flex-wrap">
-              <button class="btn button primary" data-video>
-                <span class="play" aria-hidden="true"></span><span class="control-label" data-en="WATCH THE STORY">WATCH
-                  THE STORY</span></button><button class="btn button secondary" data-plan
-                data-en="PLAN YOUR PILGRIMAGE">
-                PLAN YOUR PILGRIMAGE
-              </button>
+        <form id="search-form" class="panel search-panel" hidden role="search">
+          <div class="search-panel-heading">
+            <div>
+              <p class="search-eyebrow">YOUR KUMBH GUIDE</p>
+              <label for="search">What would you like to explore?</label>
             </div>
-          </div>
-          <div class="hero-visual col-12 col-md-7">
-            <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-              <source src="assets/hero-video.mp4" type="video/mp4" />
-            </video>
-            <button class="video-button" data-video="assets/hero-video.mp4">
-              <svg viewBox="0 0 20 24" aria-hidden="true">
-                <path d="M3 2 17 12 3 22Z" />
-              </svg><span class="control-label" data-en="WATCH FULL VIDEO">WATCH FULL VIDEO</span>
+            <button
+              class="search-close"
+              type="button"
+              aria-label="Close search"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" />
+              </svg>
             </button>
           </div>
-        </div>
+          <p id="search-hint" class="search-hint">
+            Find your way to stories, sacred places and a memorable journey.
+          </p>
+          <div class="search-field">
+            <svg
+              class="search-field-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" />
+            </svg>
+            <input
+              id="search"
+              type="search"
+              placeholder="Try story or pilgrimage"
+              aria-describedby="search-hint"
+              autocomplete="off"
+              required
+            />
+            <button class="search-submit" type="submit">
+              <span class="control-label" data-en="Search">Search</span
+              ><span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div class="search-suggestions">
+            <p>QUICK EXPLORE</p>
+            <div class="search-chips d-flex flex-wrap">
+              <a href="#plan-your-visit">Plan your pilgrimage</a
+              ><a href="#ceremonies">Calendar</a
+              ><a href="#holy-cities">Sacred Places</a
+              ><a href="#featured-stories">Stories</a>
+            </div>
+          </div>
+          <p id="search-result" role="status" aria-live="polite"></p>
+          <p class="search-footer-note">Press Escape to close</p>
+        </form>
+        <nav
+          id="site-menu"
+          class="panel menu"
+          hidden
+          aria-label="Main navigation"
+        >
+          <a href="index.html">Home</a
+          ><button data-video>Watch the story</button
+          ><button data-plan>Plan your pilgrimage</button>
+        </nav>
       </div>
-    </section>
-    <section class="pilgrimage-ticker" aria-label="Pilgrimage highlights ticker">
-      <div class="ticker-viewport"><div class="ticker-track">
-        <div class="ticker-group"><span class="ticker-item" data-en="A Journey of Faith">A Journey of Faith</span><span class="ticker-separator" aria-hidden="true">&#10022;</span><span class="ticker-item" data-en="Nashik - Trimbakeshwar">Nashik - Trimbakeshwar</span><span class="ticker-separator" aria-hidden="true">&#10022;</span><span class="ticker-item" data-en="Sacred Traditions">Sacred Traditions</span><span class="ticker-separator" aria-hidden="true">&#10022;</span><span class="ticker-item" data-en="On the Banks of the Godavari">On the Banks of the Godavari</span><span class="ticker-separator" aria-hidden="true">&#10022;</span><span class="ticker-item" data-en="One Timeless Gathering">One Timeless Gathering</span><span class="ticker-separator" aria-hidden="true">&#10022;</span></div>
-        <div class="ticker-group" aria-hidden="true"><span class="ticker-item" data-en="A Journey of Faith">A Journey of Faith</span><span class="ticker-separator" aria-hidden="true">&#10022;</span><span class="ticker-item" data-en="Nashik - Trimbakeshwar">Nashik - Trimbakeshwar</span><span class="ticker-separator" aria-hidden="true">&#10022;</span><span class="ticker-item" data-en="Sacred Traditions">Sacred Traditions</span><span class="ticker-separator" aria-hidden="true">&#10022;</span><span class="ticker-item" data-en="On the Banks of the Godavari">On the Banks of the Godavari</span><span class="ticker-separator" aria-hidden="true">&#10022;</span><span class="ticker-item" data-en="One Timeless Gathering">One Timeless Gathering</span><span class="ticker-separator" aria-hidden="true">&#10022;</span></div>
-      </div></div>
-      <button class="ticker-pause" type="button" aria-label="Pause scrolling text" aria-pressed="false"><svg class="ticker-pause-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10"/></svg><svg class="ticker-play-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6Z"/></svg></button>
-    </section>
-    <section class="journey" id="plan-your-visit" aria-labelledby="journey-title">
-      <div class="journey-inner container">
-        <div class="row g-0">
-          <div class="col-12">
-            <div class="journey-heading">
-              <div>
-                <p class="eyebrow" data-en="PLAN YOUR VISIT">
-                  PLAN YOUR VISIT
+    </header>
+    <main id="main-content" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="row g-0 m-0">
+            <div class="col-12 col-md-5">
+              <p class="eyebrow" data-en="A JOURNEY OF FAITH">
+                A JOURNEY OF FAITH
+              </p>
+              <h1 id="hero-title">
+                <span data-en="Where">Where</span
+                ><span data-en="Devotion">Devotion</span
+                ><span data-en="Meets the">Meets the</span
+                ><span data-en="Sacred River">Sacred River</span>
+              </h1>
+              <p
+                class="intro"
+                data-en="A timeless journey of faith, devotion and spiritual awakening on the sacred banks of the Godavari."
+              >
+                A timeless journey of faith, devotion and spiritual awakening on
+                the sacred banks of the Godavari.
+              </p>
+              <div class="hero-actions d-flex flex-wrap">
+                <button class="btn button primary" data-video>
+                  <span class="play" aria-hidden="true"></span
+                  ><span class="control-label" data-en="WATCH THE STORY"
+                    >WATCH THE STORY</span
+                  ></button
+                ><button
+                  class="btn button secondary"
+                  data-plan
+                  data-en="PLAN YOUR PILGRIMAGE"
+                >
+                  PLAN YOUR PILGRIMAGE
+                </button>
+              </div>
+            </div>
+            <div class="hero-visual col-12 col-md-7">
+              <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              >
+                <source src="assets/hero-video.mp4" type="video/mp4" />
+              </video>
+              <button class="video-button" data-video="assets/hero-video.mp4">
+                <svg viewBox="0 0 20 24" aria-hidden="true">
+                  <path d="M3 2 17 12 3 22Z" /></svg
+                ><span class="control-label" data-en="WATCH FULL VIDEO"
+                  >WATCH FULL VIDEO</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="pilgrimage-ticker"
+        aria-label="Pilgrimage highlights ticker"
+      >
+        <div class="ticker-viewport">
+          <div class="ticker-track">
+            <div class="ticker-group">
+              <span class="ticker-item" data-en="A Journey of Faith"
+                >A Journey of Faith</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span
+              ><span class="ticker-item" data-en="Nashik - Trimbakeshwar"
+                >Nashik - Trimbakeshwar</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span
+              ><span class="ticker-item" data-en="Sacred Traditions"
+                >Sacred Traditions</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span
+              ><span class="ticker-item" data-en="On the Banks of the Godavari"
+                >On the Banks of the Godavari</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span
+              ><span class="ticker-item" data-en="One Timeless Gathering"
+                >One Timeless Gathering</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span>
+            </div>
+            <div class="ticker-group" aria-hidden="true">
+              <span class="ticker-item" data-en="A Journey of Faith"
+                >A Journey of Faith</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span
+              ><span class="ticker-item" data-en="Nashik - Trimbakeshwar"
+                >Nashik - Trimbakeshwar</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span
+              ><span class="ticker-item" data-en="Sacred Traditions"
+                >Sacred Traditions</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span
+              ><span class="ticker-item" data-en="On the Banks of the Godavari"
+                >On the Banks of the Godavari</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span
+              ><span class="ticker-item" data-en="One Timeless Gathering"
+                >One Timeless Gathering</span
+              ><span class="ticker-separator" aria-hidden="true">&#10022;</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="journey"
+        id="plan-your-visit"
+        aria-labelledby="journey-title"
+      >
+        <div class="journey-inner container">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="journey-heading">
+                <div>
+                  <p class="eyebrow" data-en="PLAN YOUR VISIT">
+                    PLAN YOUR VISIT
+                  </p>
+                  <h2 id="journey-title" data-en="Prepare for Your Journey">
+                    Prepare for Your Journey
+                  </h2>
+                </div>
+                <p
+                  class="journey-intro"
+                  data-en="Everything you need to arrive, navigate and experience the Kumbh with ease."
+                >
+                  Everything you need to arrive, navigate<br
+                    class="desktop-break"
+                  />
+                  and experience the Kumbh with ease.
                 </p>
-                <h2 id="journey-title" data-en="Prepare for Your Journey">
-                  Prepare for Your Journey
+              </div>
+              <div
+                class="journey-grid row row-cols-1 row-cols-sm-2 row-cols-md-3"
+              >
+                <div class="col">
+                  <article class="journey-card card h-100" id="travel">
+                    <div class="journey-card-main d-flex align-items-center">
+                      <img
+                        src="assets/journey-1.png"
+                        alt="Train travelling through a tree-lined route"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 data-en="How to Reach">How to Reach</h3>
+                        <p>Flights · Railways · Road · Local Transport</p>
+                      </div>
+                    </div>
+                    <ul
+                      class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
+                      aria-label="How to Reach topics"
+                    >
+                      <li>Flights</li>
+                      <li>Railways</li>
+                      <li>Road</li>
+                      <li>Local Transport</li>
+                    </ul>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="journey-card card h-100" id="stay">
+                    <div class="journey-card-main d-flex align-items-center">
+                      <img
+                        src="assets/journey-2.png"
+                        alt="Welcoming hotel and landscaped grounds"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 data-en="Where to Stay">Where to Stay</h3>
+                        <p>Hotels · Camps · Dharamshalas · Accommodation</p>
+                      </div>
+                    </div>
+                    <ul
+                      class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
+                      aria-label="Where to Stay topics"
+                    >
+                      <li>Hotels</li>
+                      <li>Camps</li>
+                      <li>Dharamshalas</li>
+                      <li>Accommodation</li>
+                    </ul>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="journey-card card h-100" id="transport">
+                    <div class="journey-card-main d-flex align-items-center">
+                      <img
+                        src="assets/journey-3.png"
+                        alt="Local transport on a busy Indian street"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 data-en="Getting Around">Getting Around</h3>
+                        <p>Routes · Shuttle Services · Parking · Transit</p>
+                      </div>
+                    </div>
+                    <ul
+                      class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
+                      aria-label="Getting Around topics"
+                    >
+                      <li>Routes</li>
+                      <li>Shuttle Services</li>
+                      <li>Parking</li>
+                      <li>Transit</li>
+                    </ul>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="journey-card card h-100" id="facilities">
+                    <div class="journey-card-main d-flex align-items-center">
+                      <img
+                        src="assets/journey-4.png"
+                        alt="Freshly prepared food for a meal"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 data-en="Food & Essentials">Food & Essentials</h3>
+                        <p>Food · Drinking Water · Toilets · Services</p>
+                      </div>
+                    </div>
+                    <ul
+                      class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
+                      aria-label="Food & Essentials topics"
+                    >
+                      <li>Food</li>
+                      <li>Drinking Water</li>
+                      <li>Toilets</li>
+                      <li>Services</li>
+                    </ul>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="journey-card card h-100" id="safety">
+                    <div class="journey-card-main d-flex align-items-center">
+                      <img
+                        src="assets/journey-5.png"
+                        alt="Medical professional providing support"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 data-en="Safety & Support">Safety & Support</h3>
+                        <p>Medical · Police · Emergency · Lost & Found</p>
+                      </div>
+                    </div>
+                    <ul
+                      class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
+                      aria-label="Safety & Support topics"
+                    >
+                      <li>Medical</li>
+                      <li>Police</li>
+                      <li>Emergency</li>
+                      <li>Lost & Found</li>
+                    </ul>
+                  </article>
+                </div>
+                <div class="col">
+                  <article
+                    class="journey-card card h-100"
+                    id="accessible-visit"
+                  >
+                    <div class="journey-card-main d-flex align-items-center">
+                      <img
+                        src="assets/journey-6.png"
+                        alt="Riverside ghats and walkways"
+                        width="120"
+                        height="120"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3 data-en="Accessibility">Accessibility</h3>
+                        <p>Accessible Routes · Facilities · Assistance</p>
+                      </div>
+                    </div>
+                    <ul
+                      class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
+                      aria-label="Accessibility topics"
+                    >
+                      <li>Accessible Routes</li>
+                      <li>Facilities</li>
+                      <li>Assistance</li>
+                    </ul>
+                  </article>
+                </div>
+              </div>
+              <div class="journey-action">
+                <button
+                  class="btn button primary journey-cta"
+                  type="button"
+                  data-plan
+                >
+                  <span class="control-label" data-en="PLAN YOUR PILGRIMAGE"
+                    >PLAN YOUR PILGRIMAGE</span
+                  ><span aria-hidden="true">&#8594;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sacred-journey" aria-labelledby="sacred-journey-title">
+        <div class="container">
+          <div class="row g-0 align-items-center sacred-journey-row">
+            <div class="col-12 col-md-5 sacred-journey-copy">
+              <p class="eyebrow">THE SACRED JOURNEY</p>
+              <h2 id="sacred-journey-title">
+                <span data-en="A Sacred Cycle">A Sacred Cycle</span
+                ><span data-en="Twelve Years">Twelve Years</span
+                ><span data-en="in the Making">in the Making</span>
+              </h2>
+              <p class="sacred-journey-description">
+                Every twelve years, Nashik and Trimbakeshwar become the meeting
+                place of millions of pilgrims, saints, seekers and visitors.
+                Guided by an ancient tradition and centred around the sacred
+                Godavari, the Kumbh is a celebration of faith, heritage and the
+                timeless spirit of India.
+              </p>
+              <a
+                class="btn button primary sacred-journey-button"
+                href="#pilgrimage-highlights"
+                ><span class="control-label" data-en="DISCOVER THE JOURNEY"
+                  >DISCOVER THE JOURNEY</span
+                ><span aria-hidden="true">&#8594;</span></a
+              >
+            </div>
+            <div class="col-12 col-md-7">
+              <div class="sacred-journey-visual">
+                <img
+                  src="assets/about-image.png"
+                  alt="Devotees taking part in a sacred riverside ritual"
+                  width="1200"
+                  height="810"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="ceremonies"
+        id="ceremonies"
+        aria-labelledby="ceremonies-title"
+      >
+        <div class="ceremonies-inner container">
+          <div class="row g-0">
+            <div class="col-12">
+              <p class="eyebrow">KEY CEREMONIES</p>
+              <h2 id="ceremonies-title">Gather for Sacred Days</h2>
+              <div
+                class="ceremonies-toolbar d-flex flex-wrap justify-content-between align-items-end"
+              >
+                <p class="ceremonies-intro">
+                  From the ceremonial beginning of Simhastha to the most
+                  auspicious bathing days, discover the important moments of
+                  Nashik Kumbh.
+                </p>
+                <div
+                  class="ceremony-filters d-flex flex-wrap"
+                  role="group"
+                  aria-label="Filter ceremonies"
+                >
+                  <button
+                    class="btn ceremony-filter active"
+                    type="button"
+                    data-ceremony-filter="all"
+                    aria-pressed="true"
+                    aria-controls="ceremony-list"
+                  >
+                    <span class="control-label" data-en="ALL">ALL</span>
+                  </button>
+                  <button
+                    class="btn ceremony-filter"
+                    type="button"
+                    data-ceremony-filter="dhwajarohan"
+                    aria-pressed="false"
+                    aria-controls="ceremony-list"
+                  >
+                    <span class="control-label" data-en="DHWAJAROHAN"
+                      >DHWAJAROHAN</span
+                    >
+                  </button>
+                  <button
+                    class="btn ceremony-filter"
+                    type="button"
+                    data-ceremony-filter="amrit"
+                    aria-pressed="false"
+                    aria-controls="ceremony-list"
+                  >
+                    <span class="control-label" data-en="AMRIT SNAN"
+                      >AMRIT SNAN</span
+                    >
+                  </button>
+                  <button
+                    class="btn ceremony-filter"
+                    type="button"
+                    data-ceremony-filter="religious"
+                    aria-pressed="false"
+                    aria-controls="ceremony-list"
+                  >
+                    <span class="control-label" data-en="RELIGIOUS CEREMONIES"
+                      >RELIGIOUS CEREMONIES</span
+                    >
+                  </button>
+                  <button
+                    class="btn ceremony-filter"
+                    type="button"
+                    data-ceremony-filter="cultural"
+                    aria-pressed="false"
+                    aria-controls="ceremony-list"
+                  >
+                    <span class="control-label" data-en="CULTURAL EVENTS"
+                      >CULTURAL EVENTS</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <div
+                id="ceremony-list"
+                class="ceremony-list"
+                aria-live="polite"
+                aria-relevant="additions removals"
+              >
+                <article
+                  class="ceremony-row row g-0 align-items-center"
+                  data-ceremony-category="dhwajarohan"
+                >
+                  <div class="ceremony-date col-12 col-sm-3 col-md-2">
+                    <p class="ceremony-category">OPENING</p>
+                    <p class="ceremony-day">Ashwina Purnima</p>
+                  </div>
+                  <h3 class="col-12 col-sm-9 col-md-3">Dhwajarohan</h3>
+                  <p class="ceremony-description col-12 col-md-7">
+                    Sacred flag-hoisting ceremony marking the formal beginning
+                    of Simhastha at Nashik and Trimbakeshwar.
+                  </p>
+                </article>
+                <article
+                  class="ceremony-row row g-0 align-items-center"
+                  data-ceremony-category="amrit"
+                >
+                  <div class="ceremony-date col-12 col-sm-3 col-md-2">
+                    <p class="ceremony-category">AMRIT SNAN</p>
+                    <p class="ceremony-day">Kartika Purnima</p>
+                  </div>
+                  <h3 class="col-12 col-sm-9 col-md-3">
+                    First Sacred Bathing Day
+                  </h3>
+                  <p class="ceremony-description col-12 col-md-7">
+                    The most auspicious bathing day, when millions gather at the
+                    sacred ghats of the Godavari.
+                  </p>
+                </article>
+                <article
+                  class="ceremony-row row g-0 align-items-center"
+                  data-ceremony-category="amrit"
+                >
+                  <div class="ceremony-date col-12 col-sm-3 col-md-2">
+                    <p class="ceremony-category">AMRIT SNAN</p>
+                    <p class="ceremony-day">Mauni Amavasya</p>
+                  </div>
+                  <h3 class="col-12 col-sm-9 col-md-3">
+                    Main Royal Bathing Day
+                  </h3>
+                  <p class="ceremony-description col-12 col-md-7">
+                    The principal Shahi Snan, observed with great ceremony and
+                    deep spiritual significance by all Akharas.
+                  </p>
+                </article>
+                <article
+                  class="ceremony-row row g-0 align-items-center"
+                  data-ceremony-category="religious"
+                >
+                  <div class="ceremony-date col-12 col-sm-3 col-md-2">
+                    <p class="ceremony-category">CEREMONY</p>
+                    <p class="ceremony-day">Vasanta Panchami</p>
+                  </div>
+                  <h3 class="col-12 col-sm-9 col-md-3">Spring Festival</h3>
+                  <p class="ceremony-description col-12 col-md-7">
+                    Celebration of the arrival of spring with religious
+                    ceremonies and processions across Nashik.
+                  </p>
+                </article>
+                <article
+                  class="ceremony-row row g-0 align-items-center"
+                  data-ceremony-category="cultural"
+                >
+                  <div class="ceremony-date col-12 col-sm-3 col-md-2">
+                    <p class="ceremony-category">CULTURAL</p>
+                    <p class="ceremony-day">Maha Shivaratri</p>
+                  </div>
+                  <h3 class="col-12 col-sm-9 col-md-3">Night of Shiva</h3>
+                  <p class="ceremony-description col-12 col-md-7">
+                    A night of devotion and celebration centred around the
+                    sacred Trimbakeshwar Jyotirlinga temple.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="highlights"
+        id="pilgrimage-highlights"
+        aria-labelledby="highlights-title"
+      >
+        <div class="highlights-inner container">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="highlights-heading text-center">
+                <p class="eyebrow">PILGRIMAGE HIGHLIGHTS</p>
+                <h2 id="highlights-title">Discover the Gathering</h2>
+                <p>
+                  Beyond the crowds and ceremonies lies a world of rituals,
+                  traditions, stories and moments that make every Kumbh unique.
+                </p>
+              </div>
+              <div
+                class="highlights-grid row row-cols-1 row-cols-sm-2 row-cols-md-3"
+              >
+                <div class="col">
+                  <article class="highlight-card card h-100">
+                    <img
+                      src="assets/experience-card-1.png"
+                      alt=""
+                      loading="lazy"
+                      width="640"
+                      height="620"
+                    />
+                    <p class="highlight-label">THE SACRED BATH</p>
+                    <div class="highlight-copy">
+                      <h3>Sacred Snan</h3>
+                      <p>
+                        Witness the timeless ritual of sacred bathing along the
+                        Godavari - millions united in a single act of devotion.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="highlight-card card h-100">
+                    <img
+                      src="assets/experience-card-2.png"
+                      alt=""
+                      loading="lazy"
+                      width="640"
+                      height="620"
+                    />
+                    <p class="highlight-label">ANCIENT TRADITIONS</p>
+                    <div class="highlight-copy">
+                      <h3>Akharas & Saints</h3>
+                      <p>
+                        Discover the ancient spiritual orders and the traditions
+                        carried across generations of saints and ascetics.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="highlight-card card h-100">
+                    <img
+                      src="assets/experience-card-3.png"
+                      alt=""
+                      loading="lazy"
+                      width="640"
+                      height="620"
+                    />
+                    <p class="highlight-label">LIGHT AND SONG</p>
+                    <div class="highlight-copy">
+                      <h3>Aarti & Devotion</h3>
+                      <p>
+                        Experience the light, chants and devotion that come
+                        alive along the sacred river as evening descends.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="highlight-card card h-100">
+                    <img
+                      src="assets/experience-card-4.png"
+                      alt=""
+                      loading="lazy"
+                      width="640"
+                      height="620"
+                    />
+                    <p class="highlight-label">SATSANG & REFLECTION</p>
+                    <div class="highlight-copy">
+                      <h3>Spiritual Discourses</h3>
+                      <p>
+                        Listen, reflect and connect through satsangs, pravachans
+                        and gatherings by revered teachers.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="highlight-card card h-100">
+                    <img
+                      src="assets/experience-card-5.png"
+                      alt=""
+                      loading="lazy"
+                      width="640"
+                      height="620"
+                    />
+                    <p class="highlight-label">LIVING HERITAGE</p>
+                    <div class="highlight-copy">
+                      <h3>Cultural Heritage</h3>
+                      <p>
+                        Explore music, art, traditions and cultural expressions
+                        from across India in one sacred confluence.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="highlight-card card h-100">
+                    <img
+                      src="assets/experience-card.png"
+                      alt=""
+                      loading="lazy"
+                      width="640"
+                      height="620"
+                    />
+                    <p class="highlight-label">PILGRIM STORIES</p>
+                    <div class="highlight-copy">
+                      <h3>Life at the Kumbh</h3>
+                      <p>
+                        Experience the people, colours, sounds and everyday
+                        moments that create the living, breathing Kumbh.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="highlights-action text-center">
+                <button
+                  class="btn button primary highlights-cta"
+                  type="button"
+                  data-video
+                >
+                  <span
+                    class="control-label"
+                    data-en="EXPLORE THE PILGRIMAGE EXPERIENCE"
+                    >EXPLORE THE PILGRIMAGE EXPERIENCE</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="important-numbers" aria-labelledby="numbers-title">
+        <div class="numbers-inner container">
+          <div class="row g-0">
+            <div class="col-12">
+              <h2 id="numbers-title" class="text-center">Important Numbers</h2>
+              <div
+                class="numbers-grid row row-cols-1 row-cols-sm-2 row-cols-md-3"
+              >
+                <div class="col">
+                  <article class="number-card number-pilgrims h-100">
+                    <div class="number-copy">
+                      <p class="number-value">55</p>
+                      <p class="number-label">Million Pilgrims</p>
+                    </div>
+                    <svg
+                      class="number-icon"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <circle cx="32" cy="18" r="6" />
+                      <circle cx="17" cy="24" r="5" />
+                      <circle cx="47" cy="24" r="5" />
+                      <path
+                        d="M20 49c0-11 4-17 12-17s12 6 12 17M8 48c0-9 3-14 9-14 3 0 5 1 7 3m16 0c2-2 4-3 7-3 6 0 9 5 9 14"
+                      />
+                    </svg>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="number-card number-akharas h-100">
+                    <div class="number-copy">
+                      <p class="number-value">13</p>
+                      <p class="number-label">Akharas</p>
+                    </div>
+                    <svg
+                      class="number-icon"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 25 32 12l20 13H12Zm5 0v23m10-23v23m10-23v23m10-23v23M14 48h36M12 53h40M32 12V6m-6 0h12"
+                      />
+                    </svg>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="number-card number-days h-100">
+                    <div class="number-copy">
+                      <p class="number-value">48</p>
+                      <p class="number-label">Days of Shahi Snan</p>
+                    </div>
+                    <svg
+                      class="number-icon"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <rect x="11" y="15" width="42" height="39" rx="5" />
+                      <path
+                        d="M11 26h42M21 10v11m22-11v11M21 36h6m10 0h6M21 45h6m10 0h6"
+                      />
+                    </svg>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="number-card number-ghats h-100">
+                    <div class="number-copy">
+                      <p class="number-value">18</p>
+                      <p class="number-label">Ghats</p>
+                    </div>
+                    <svg
+                      class="number-icon"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M9 44h7V34h9V24h8V15H12m21 9h24M25 34h32M11 53c5-5 10 5 15 0s10 5 15 0 10 5 16 0"
+                      />
+                    </svg>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="number-card number-footfall h-100">
+                    <img
+                      src="assets/footfall.jpeg"
+                      alt=""
+                      width="800"
+                      height="400"
+                      loading="lazy"
+                    />
+                    <div class="number-copy">
+                      <p class="number-value">32</p>
+                      <p class="number-label">Million Footfall</p>
+                    </div>
+                  </article>
+                </div>
+                <div class="col">
+                  <article class="number-card number-river h-100">
+                    <div class="number-copy">
+                      <p class="number-value">01</p>
+                      <p class="number-label">Holy River</p>
+                    </div>
+                    <svg
+                      class="number-icon"
+                      viewBox="0 0 64 64"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M6 25c6-7 11 7 17 0s11 7 17 0 11 7 17 0M6 38c6-7 11 7 17 0s11 7 17 0 11 7 17 0M6 51c6-7 11 7 17 0s11 7 17 0 11 7 17 0"
+                      />
+                    </svg>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="holy-cities"
+        id="holy-cities"
+        aria-labelledby="cities-title"
+      >
+        <div class="cities-inner container">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="cities-heading text-center">
+                <p class="eyebrow">PLACES OF PILGRIMAGE</p>
+                <h2 id="cities-title">
+                  <span data-en="Two Holy Cities.">Two Holy Cities.</span
+                  ><span data-en="One Timeless Calling."
+                    >One Timeless Calling.</span
+                  >
                 </h2>
               </div>
-              <p class="journey-intro"
-                data-en="Everything you need to arrive, navigate and experience the Kumbh with ease.">
-                Everything you need to arrive, navigate<br class="desktop-break" />
-                and experience the Kumbh with ease.
-              </p>
-            </div>
-            <div class="journey-grid row row-cols-1 row-cols-sm-2 row-cols-md-3">
-              <div class="col">
-                <article class="journey-card card h-100" id="travel">
-                  <div class="journey-card-main d-flex align-items-center">
-                    <img src="assets/journey-1.png" alt="Train travelling through a tree-lined route" width="120"
-                      height="120" loading="lazy" />
-                    <div>
-                      <h3 data-en="How to Reach">How to Reach</h3>
-                      <p>Flights · Railways · Road · Local Transport</p>
+              <div class="cities-grid row row-cols-1 row-cols-md-2">
+                <div class="col">
+                  <article class="city-card card h-100">
+                    <img
+                      src="assets/destination-card-1.png"
+                      alt="Ramkund and the Godavari ghats in Nashik"
+                      width="1200"
+                      height="763"
+                      loading="lazy"
+                    />
+                    <p class="city-name">NASHIK</p>
+                    <div class="city-copy">
+                      <h3>The City of the Godavari</h3>
+                      <ul
+                        class="city-tags list-unstyled d-flex flex-wrap"
+                        aria-label="Nashik highlights"
+                      >
+                        <li>RAM KUND</li>
+                        <li>PANCHAVATI</li>
+                        <li>SACRED GHATS</li>
+                        <li>TEMPLES</li>
+                        <li>CULTURAL HERITAGE</li>
+                      </ul>
                     </div>
-                  </div>
-                  <ul class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
-                    aria-label="How to Reach topics">
-                    <li>Flights</li>
-                    <li>Railways</li>
-                    <li>Road</li>
-                    <li>Local Transport</li>
-                  </ul>
-                </article>
-              </div>
-              <div class="col">
-                <article class="journey-card card h-100" id="stay">
-                  <div class="journey-card-main d-flex align-items-center">
-                    <img src="assets/journey-2.png" alt="Welcoming hotel and landscaped grounds" width="120"
-                      height="120" loading="lazy" />
-                    <div>
-                      <h3 data-en="Where to Stay">Where to Stay</h3>
-                      <p>Hotels · Camps · Dharamshalas · Accommodation</p>
-                    </div>
-                  </div>
-                  <ul class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
-                    aria-label="Where to Stay topics">
-                    <li>Hotels</li>
-                    <li>Camps</li>
-                    <li>Dharamshalas</li>
-                    <li>Accommodation</li>
-                  </ul>
-                </article>
-              </div>
-              <div class="col">
-                <article class="journey-card card h-100" id="transport">
-                  <div class="journey-card-main d-flex align-items-center">
-                    <img src="assets/journey-3.png" alt="Local transport on a busy Indian street" width="120"
-                      height="120" loading="lazy" />
-                    <div>
-                      <h3 data-en="Getting Around">Getting Around</h3>
-                      <p>Routes · Shuttle Services · Parking · Transit</p>
-                    </div>
-                  </div>
-                  <ul class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
-                    aria-label="Getting Around topics">
-                    <li>Routes</li>
-                    <li>Shuttle Services</li>
-                    <li>Parking</li>
-                    <li>Transit</li>
-                  </ul>
-                </article>
-              </div>
-              <div class="col">
-                <article class="journey-card card h-100" id="facilities">
-                  <div class="journey-card-main d-flex align-items-center">
-                    <img src="assets/journey-4.png" alt="Freshly prepared food for a meal" width="120" height="120"
-                      loading="lazy" />
-                    <div>
-                      <h3 data-en="Food & Essentials">Food & Essentials</h3>
-                      <p>Food · Drinking Water · Toilets · Services</p>
-                    </div>
-                  </div>
-                  <ul class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
-                    aria-label="Food & Essentials topics">
-                    <li>Food</li>
-                    <li>Drinking Water</li>
-                    <li>Toilets</li>
-                    <li>Services</li>
-                  </ul>
-                </article>
-              </div>
-              <div class="col">
-                <article class="journey-card card h-100" id="safety">
-                  <div class="journey-card-main d-flex align-items-center">
-                    <img src="assets/journey-5.png" alt="Medical professional providing support" width="120"
-                      height="120" loading="lazy" />
-                    <div>
-                      <h3 data-en="Safety & Support">Safety & Support</h3>
-                      <p>Medical · Police · Emergency · Lost & Found</p>
-                    </div>
-                  </div>
-                  <ul class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
-                    aria-label="Safety & Support topics">
-                    <li>Medical</li>
-                    <li>Police</li>
-                    <li>Emergency</li>
-                    <li>Lost & Found</li>
-                  </ul>
-                </article>
-              </div>
-              <div class="col">
-                <article class="journey-card card h-100" id="accessible-visit">
-                  <div class="journey-card-main d-flex align-items-center">
-                    <img src="assets/journey-6.png" alt="Riverside ghats and walkways" width="120" height="120"
-                      loading="lazy" />
-                    <div>
-                      <h3 data-en="Accessibility">Accessibility</h3>
-                      <p>Accessible Routes · Facilities · Assistance</p>
-                    </div>
-                  </div>
-                  <ul class="journey-tags list-unstyled d-flex flex-wrap align-items-center"
-                    aria-label="Accessibility topics">
-                    <li>Accessible Routes</li>
-                    <li>Facilities</li>
-                    <li>Assistance</li>
-                  </ul>
-                </article>
-              </div>
-            </div>
-            <div class="journey-action">
-              <button class="btn button primary journey-cta" type="button" data-plan>
-                <span class="control-label" data-en="PLAN YOUR PILGRIMAGE">PLAN YOUR PILGRIMAGE</span><span
-                  aria-hidden="true">&#8594;</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="sacred-journey" aria-labelledby="sacred-journey-title">
-      <div class="container">
-        <div class="row g-0 align-items-center sacred-journey-row">
-          <div class="col-12 col-md-5 sacred-journey-copy">
-            <p class="eyebrow">THE SACRED JOURNEY</p>
-            <h2 id="sacred-journey-title">
-              <span data-en="A Sacred Cycle">A Sacred Cycle</span><span data-en="Twelve Years">Twelve Years</span><span
-                data-en="in the Making">in the Making</span>
-            </h2>
-            <p class="sacred-journey-description">
-              Every twelve years, Nashik and Trimbakeshwar become the meeting
-              place of millions of pilgrims, saints, seekers and visitors.
-              Guided by an ancient tradition and centred around the sacred
-              Godavari, the Kumbh is a celebration of faith, heritage and the
-              timeless spirit of India.
-            </p>
-            <a class="btn button primary sacred-journey-button" href="#pilgrimage-highlights"><span
-                class="control-label" data-en="DISCOVER THE JOURNEY">DISCOVER THE JOURNEY</span><span
-                aria-hidden="true">&#8594;</span></a>
-          </div>
-          <div class="col-12 col-md-7">
-            <div class="sacred-journey-visual">
-              <img src="assets/about-image.png" alt="Devotees taking part in a sacred riverside ritual" width="1200"
-                height="810" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="ceremonies" id="ceremonies" aria-labelledby="ceremonies-title">
-      <div class="ceremonies-inner container">
-        <div class="row g-0">
-          <div class="col-12">
-            <p class="eyebrow">KEY CEREMONIES</p>
-            <h2 id="ceremonies-title">Gather for Sacred Days</h2>
-            <div class="ceremonies-toolbar d-flex flex-wrap justify-content-between align-items-end">
-              <p class="ceremonies-intro">
-                From the ceremonial beginning of Simhastha to the most
-                auspicious bathing days, discover the important moments of
-                Nashik Kumbh.
-              </p>
-              <div class="ceremony-filters d-flex flex-wrap" role="group" aria-label="Filter ceremonies">
-                <button class="btn ceremony-filter active" type="button" data-ceremony-filter="all" aria-pressed="true"
-                  aria-controls="ceremony-list">
-                  <span class="control-label" data-en="ALL">ALL</span>
-                </button>
-                <button class="btn ceremony-filter" type="button" data-ceremony-filter="dhwajarohan"
-                  aria-pressed="false" aria-controls="ceremony-list">
-                  <span class="control-label" data-en="DHWAJAROHAN">DHWAJAROHAN</span>
-                </button>
-                <button class="btn ceremony-filter" type="button" data-ceremony-filter="amrit" aria-pressed="false"
-                  aria-controls="ceremony-list">
-                  <span class="control-label" data-en="AMRIT SNAN">AMRIT SNAN</span>
-                </button>
-                <button class="btn ceremony-filter" type="button" data-ceremony-filter="religious" aria-pressed="false"
-                  aria-controls="ceremony-list">
-                  <span class="control-label" data-en="RELIGIOUS CEREMONIES">RELIGIOUS CEREMONIES</span>
-                </button>
-                <button class="btn ceremony-filter" type="button" data-ceremony-filter="cultural" aria-pressed="false"
-                  aria-controls="ceremony-list">
-                  <span class="control-label" data-en="CULTURAL EVENTS">CULTURAL EVENTS</span>
-                </button>
-              </div>
-            </div>
-            <div id="ceremony-list" class="ceremony-list" aria-live="polite" aria-relevant="additions removals">
-              <article class="ceremony-row row g-0 align-items-center" data-ceremony-category="dhwajarohan">
-                <div class="ceremony-date col-12 col-sm-3 col-md-2">
-                  <p class="ceremony-category">OPENING</p>
-                  <p class="ceremony-day">Ashwina Purnima</p>
+                  </article>
                 </div>
-                <h3 class="col-12 col-sm-9 col-md-3">Dhwajarohan</h3>
-                <p class="ceremony-description col-12 col-md-7">
-                  Sacred flag-hoisting ceremony marking the formal beginning
-                  of Simhastha at Nashik and Trimbakeshwar.
-                </p>
-              </article>
-              <article class="ceremony-row row g-0 align-items-center" data-ceremony-category="amrit">
-                <div class="ceremony-date col-12 col-sm-3 col-md-2">
-                  <p class="ceremony-category">AMRIT SNAN</p>
-                  <p class="ceremony-day">Kartika Purnima</p>
+                <div class="col">
+                  <article class="city-card card h-100">
+                    <img
+                      src="assets/destination-card-2.png"
+                      alt="Trimbakeshwar temple surrounded by green hills"
+                      width="1200"
+                      height="763"
+                      loading="lazy"
+                    />
+                    <p class="city-name">TRIMBAKESHWAR</p>
+                    <div class="city-copy">
+                      <h3>Where the Godavari Begins</h3>
+                      <ul
+                        class="city-tags list-unstyled d-flex flex-wrap"
+                        aria-label="Trimbakeshwar highlights"
+                      >
+                        <li>TRIMBAKESHWAR TEMPLE</li>
+                        <li>BRAHMAGIRI HILLS</li>
+                        <li>JYOTIRLINGA</li>
+                        <li>ANCIENT TRADITIONS</li>
+                        <li>SPIRITUAL HERITAGE</li>
+                      </ul>
+                    </div>
+                  </article>
                 </div>
-                <h3 class="col-12 col-sm-9 col-md-3">
-                  First Sacred Bathing Day
-                </h3>
-                <p class="ceremony-description col-12 col-md-7">
-                  The most auspicious bathing day, when millions gather at the
-                  sacred ghats of the Godavari.
-                </p>
-              </article>
-              <article class="ceremony-row row g-0 align-items-center" data-ceremony-category="amrit">
-                <div class="ceremony-date col-12 col-sm-3 col-md-2">
-                  <p class="ceremony-category">AMRIT SNAN</p>
-                  <p class="ceremony-day">Mauni Amavasya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="featured-stories"
+        id="featured-stories"
+        aria-labelledby="stories-title"
+      >
+        <div class="stories-inner container">
+          <div class="row g-0">
+            <div class="col-12">
+              <div
+                class="stories-heading d-flex flex-wrap justify-content-between align-items-center"
+              >
+                <div>
+                  <p class="eyebrow">FEATURED STORIES</p>
+                  <h2 id="stories-title">Stories Carried by the River</h2>
                 </div>
-                <h3 class="col-12 col-sm-9 col-md-3">
-                  Main Royal Bathing Day
-                </h3>
-                <p class="ceremony-description col-12 col-md-7">
-                  The principal Shahi Snan, observed with great ceremony and
-                  deep spiritual significance by all Akharas.
+                <p class="stories-intro">
+                  Meet the people, traditions and stories that give the Kumbh
+                  its soul.
                 </p>
-              </article>
-              <article class="ceremony-row row g-0 align-items-center" data-ceremony-category="religious">
-                <div class="ceremony-date col-12 col-sm-3 col-md-2">
-                  <p class="ceremony-category">CEREMONY</p>
-                  <p class="ceremony-day">Vasanta Panchami</p>
+              </div>
+              <div class="stories-grid row row-cols-1 row-cols-md-3">
+                <div class="col">
+                  <article class="story-card">
+                    <img
+                      src="assets/story-img-1.png"
+                      alt="Pilgrims and boats along the river ghats"
+                      width="1000"
+                      height="780"
+                      loading="lazy"
+                    />
+                    <p class="story-category">STORIES OF FAITH</p>
+                    <h3>The Sacred Cycle Returns</h3>
+                    <p class="story-excerpt">
+                      After twelve years, the Godavari awaits once more. What
+                      draws millions back to its shores?
+                    </p>
+                    <details class="story-details">
+                      <summary>
+                        <span data-en="READ STORY">READ STORY</span
+                        ><span class="story-arrow" aria-hidden="true">→</span>
+                      </summary>
+                      <div class="story-body">
+                        <p>
+                          For a pilgrim, returning to the river can be a return
+                          to family memories, shared prayers and a sense of
+                          belonging. The journey begins long before the first
+                          step onto the ghats.
+                        </p>
+                        <p>
+                          At the water's edge, individual journeys become a
+                          shared moment of faith. The river connects those
+                          arriving for the first time with those carrying a
+                          lifetime of memories.
+                        </p>
+                      </div>
+                    </details>
+                  </article>
                 </div>
-                <h3 class="col-12 col-sm-9 col-md-3">Spring Festival</h3>
-                <p class="ceremony-description col-12 col-md-7">
-                  Celebration of the arrival of spring with religious
-                  ceremonies and processions across Nashik.
-                </p>
-              </article>
-              <article class="ceremony-row row g-0 align-items-center" data-ceremony-category="cultural">
-                <div class="ceremony-date col-12 col-sm-3 col-md-2">
-                  <p class="ceremony-category">CULTURAL</p>
-                  <p class="ceremony-day">Maha Shivaratri</p>
+                <div class="col">
+                  <article class="story-card">
+                    <img
+                      src="assets/story-img-2.png"
+                      alt="Saffron-clad pilgrims gathered at the Kumbh"
+                      width="1000"
+                      height="780"
+                      loading="lazy"
+                    />
+                    <p class="story-category">STORIES OF SAINTS</p>
+                    <h3>Akhara Processions Through the Ages</h3>
+                    <p class="story-excerpt">
+                      How the ancient spiritual orders have carried tradition
+                      through centuries of Kumbh.
+                    </p>
+                    <details class="story-details">
+                      <summary>
+                        <span data-en="READ STORY">READ STORY</span
+                        ><span class="story-arrow" aria-hidden="true">→</span>
+                      </summary>
+                      <div class="story-body">
+                        <p>
+                          The sight of saffron robes, ceremonial banners and
+                          gathered ascetics is among the enduring images of the
+                          Kumbh. These processions bring spiritual communities
+                          into the shared life of the gathering.
+                        </p>
+                        <p>
+                          Beyond the spectacle lies a quieter story of teachers
+                          and disciples, daily practice and traditions passed
+                          from one generation to the next.
+                        </p>
+                      </div>
+                    </details>
+                  </article>
                 </div>
-                <h3 class="col-12 col-sm-9 col-md-3">Night of Shiva</h3>
-                <p class="ceremony-description col-12 col-md-7">
-                  A night of devotion and celebration centred around the
-                  sacred Trimbakeshwar Jyotirlinga temple.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="highlights" id="pilgrimage-highlights" aria-labelledby="highlights-title">
-      <div class="highlights-inner container">
-        <div class="row g-0">
-          <div class="col-12">
-            <div class="highlights-heading text-center">
-              <p class="eyebrow">PILGRIMAGE HIGHLIGHTS</p>
-              <h2 id="highlights-title">Discover the Gathering</h2>
-              <p>
-                Beyond the crowds and ceremonies lies a world of rituals,
-                traditions, stories and moments that make every Kumbh unique.
-              </p>
-            </div>
-            <div class="highlights-grid row row-cols-1 row-cols-sm-2 row-cols-md-3">
-              <div class="col">
-                <article class="highlight-card card h-100">
-                  <img src="assets/experience-card-1.png" alt="" loading="lazy" width="640" height="620" />
-                  <p class="highlight-label">THE SACRED BATH</p>
-                  <div class="highlight-copy">
-                    <h3>Sacred Snan</h3>
-                    <p>
-                      Witness the timeless ritual of sacred bathing along the
-                      Godavari - millions united in a single act of devotion.
+                <div class="col">
+                  <article class="story-card">
+                    <img
+                      src="assets/story-img-3.png"
+                      alt="Temples and pilgrims at Ramkund in Nashik"
+                      width="1000"
+                      height="780"
+                      loading="lazy"
+                    />
+                    <p class="story-category">STORIES OF NASHIK</p>
+                    <h3>The City That Lives for the Kumbh</h3>
+                    <p class="story-excerpt">
+                      Nashik transforms itself every twelve years - and the
+                      transformation begins long before the first pilgrim
+                      arrives.
                     </p>
-                  </div>
-                </article>
-              </div>
-              <div class="col">
-                <article class="highlight-card card h-100">
-                  <img src="assets/experience-card-2.png" alt="" loading="lazy" width="640" height="620" />
-                  <p class="highlight-label">ANCIENT TRADITIONS</p>
-                  <div class="highlight-copy">
-                    <h3>Akharas & Saints</h3>
-                    <p>
-                      Discover the ancient spiritual orders and the traditions
-                      carried across generations of saints and ascetics.
-                    </p>
-                  </div>
-                </article>
-              </div>
-              <div class="col">
-                <article class="highlight-card card h-100">
-                  <img src="assets/experience-card-3.png" alt="" loading="lazy" width="640" height="620" />
-                  <p class="highlight-label">LIGHT AND SONG</p>
-                  <div class="highlight-copy">
-                    <h3>Aarti & Devotion</h3>
-                    <p>
-                      Experience the light, chants and devotion that come
-                      alive along the sacred river as evening descends.
-                    </p>
-                  </div>
-                </article>
-              </div>
-              <div class="col">
-                <article class="highlight-card card h-100">
-                  <img src="assets/experience-card-4.png" alt="" loading="lazy" width="640" height="620" />
-                  <p class="highlight-label">SATSANG & REFLECTION</p>
-                  <div class="highlight-copy">
-                    <h3>Spiritual Discourses</h3>
-                    <p>
-                      Listen, reflect and connect through satsangs, pravachans
-                      and gatherings by revered teachers.
-                    </p>
-                  </div>
-                </article>
-              </div>
-              <div class="col">
-                <article class="highlight-card card h-100">
-                  <img src="assets/experience-card-5.png" alt="" loading="lazy" width="640" height="620" />
-                  <p class="highlight-label">LIVING HERITAGE</p>
-                  <div class="highlight-copy">
-                    <h3>Cultural Heritage</h3>
-                    <p>
-                      Explore music, art, traditions and cultural expressions
-                      from across India in one sacred confluence.
-                    </p>
-                  </div>
-                </article>
-              </div>
-              <div class="col">
-                <article class="highlight-card card h-100">
-                  <img src="assets/experience-card.png" alt="" loading="lazy" width="640" height="620" />
-                  <p class="highlight-label">PILGRIM STORIES</p>
-                  <div class="highlight-copy">
-                    <h3>Life at the Kumbh</h3>
-                    <p>
-                      Experience the people, colours, sounds and everyday
-                      moments that create the living, breathing Kumbh.
-                    </p>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div class="highlights-action text-center">
-              <button class="btn button primary highlights-cta" type="button" data-video>
-                <span class="control-label" data-en="EXPLORE THE PILGRIMAGE EXPERIENCE">EXPLORE THE PILGRIMAGE
-                  EXPERIENCE</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="important-numbers" aria-labelledby="numbers-title">
-      <div class="numbers-inner container">
-        <div class="row g-0">
-          <div class="col-12">
-            <h2 id="numbers-title" class="text-center">Important Numbers</h2>
-            <div class="numbers-grid row row-cols-1 row-cols-sm-2 row-cols-md-3">
-              <div class="col">
-                <article class="number-card number-pilgrims h-100">
-                  <div class="number-copy">
-                    <p class="number-value">55</p>
-                    <p class="number-label">Million Pilgrims</p>
-                  </div>
-                  <svg class="number-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                    <circle cx="32" cy="18" r="6" />
-                    <circle cx="17" cy="24" r="5" />
-                    <circle cx="47" cy="24" r="5" />
-                    <path
-                      d="M20 49c0-11 4-17 12-17s12 6 12 17M8 48c0-9 3-14 9-14 3 0 5 1 7 3m16 0c2-2 4-3 7-3 6 0 9 5 9 14" />
-                  </svg>
-                </article>
-              </div>
-              <div class="col">
-                <article class="number-card number-akharas h-100">
-                  <div class="number-copy">
-                    <p class="number-value">13</p>
-                    <p class="number-label">Akharas</p>
-                  </div>
-                  <svg class="number-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                    <path
-                      d="M12 25 32 12l20 13H12Zm5 0v23m10-23v23m10-23v23m10-23v23M14 48h36M12 53h40M32 12V6m-6 0h12" />
-                  </svg>
-                </article>
-              </div>
-              <div class="col">
-                <article class="number-card number-days h-100">
-                  <div class="number-copy">
-                    <p class="number-value">48</p>
-                    <p class="number-label">Days of Shahi Snan</p>
-                  </div>
-                  <svg class="number-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                    <rect x="11" y="15" width="42" height="39" rx="5" />
-                    <path d="M11 26h42M21 10v11m22-11v11M21 36h6m10 0h6M21 45h6m10 0h6" />
-                  </svg>
-                </article>
-              </div>
-              <div class="col">
-                <article class="number-card number-ghats h-100">
-                  <div class="number-copy">
-                    <p class="number-value">18</p>
-                    <p class="number-label">Ghats</p>
-                  </div>
-                  <svg class="number-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                    <path d="M9 44h7V34h9V24h8V15H12m21 9h24M25 34h32M11 53c5-5 10 5 15 0s10 5 15 0 10 5 16 0" />
-                  </svg>
-                </article>
-              </div>
-              <div class="col">
-                <article class="number-card number-footfall h-100">
-                  <img src="assets/footfall.jpeg" alt="" width="800" height="400" loading="lazy" />
-                  <div class="number-copy">
-                    <p class="number-value">32</p>
-                    <p class="number-label">Million Footfall</p>
-                  </div>
-                </article>
-              </div>
-              <div class="col">
-                <article class="number-card number-river h-100">
-                  <div class="number-copy">
-                    <p class="number-value">01</p>
-                    <p class="number-label">Holy River</p>
-                  </div>
-                  <svg class="number-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                    <path
-                      d="M6 25c6-7 11 7 17 0s11 7 17 0 11 7 17 0M6 38c6-7 11 7 17 0s11 7 17 0 11 7 17 0M6 51c6-7 11 7 17 0s11 7 17 0 11 7 17 0" />
-                  </svg>
-                </article>
+                    <details class="story-details">
+                      <summary>
+                        <span data-en="READ STORY">READ STORY</span
+                        ><span class="story-arrow" aria-hidden="true">→</span>
+                      </summary>
+                      <div class="story-body">
+                        <p>
+                          A pilgrimage is also a meeting with a city: its
+                          riverside lanes, temple courtyards, shopkeepers and
+                          residents. In Nashik, these everyday places become
+                          part of each visitor's experience of the Kumbh.
+                        </p>
+                        <p>
+                          Behind the great gathering are countless small acts of
+                          welcome. Directions offered, food shared and space
+                          made for a traveller become stories carried home long
+                          after the journey ends.
+                        </p>
+                      </div>
+                    </details>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="holy-cities" id="holy-cities" aria-labelledby="cities-title">
-      <div class="cities-inner container">
-        <div class="row g-0">
-          <div class="col-12">
-            <div class="cities-heading text-center">
-              <p class="eyebrow">PLACES OF PILGRIMAGE</p>
-              <h2 id="cities-title">
-                <span data-en="Two Holy Cities.">Two Holy Cities.</span><span data-en="One Timeless Calling.">One
-                  Timeless Calling.</span>
-              </h2>
-            </div>
-            <div class="cities-grid row row-cols-1 row-cols-md-2">
-              <div class="col">
-                <article class="city-card card h-100">
-                  <img src="assets/destination-card-1.png" alt="Ramkund and the Godavari ghats in Nashik" width="1200"
-                    height="763" loading="lazy" />
-                  <p class="city-name">NASHIK</p>
-                  <div class="city-copy">
-                    <h3>The City of the Godavari</h3>
-                    <ul class="city-tags list-unstyled d-flex flex-wrap" aria-label="Nashik highlights">
-                      <li>RAM KUND</li>
-                      <li>PANCHAVATI</li>
-                      <li>SACRED GHATS</li>
-                      <li>TEMPLES</li>
-                      <li>CULTURAL HERITAGE</li>
-                    </ul>
-                  </div>
-                </article>
-              </div>
-              <div class="col">
-                <article class="city-card card h-100">
-                  <img src="assets/destination-card-2.png" alt="Trimbakeshwar temple surrounded by green hills"
-                    width="1200" height="763" loading="lazy" />
-                  <p class="city-name">TRIMBAKESHWAR</p>
-                  <div class="city-copy">
-                    <h3>Where the Godavari Begins</h3>
-                    <ul class="city-tags list-unstyled d-flex flex-wrap" aria-label="Trimbakeshwar highlights">
-                      <li>TRIMBAKESHWAR TEMPLE</li>
-                      <li>BRAHMAGIRI HILLS</li>
-                      <li>JYOTIRLINGA</li>
-                      <li>ANCIENT TRADITIONS</li>
-                      <li>SPIRITUAL HERITAGE</li>
-                    </ul>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="featured-stories" id="featured-stories" aria-labelledby="stories-title">
-      <div class="stories-inner container">
-        <div class="row g-0">
-          <div class="col-12">
-            <div class="stories-heading d-flex flex-wrap justify-content-between align-items-center">
-              <div>
-                <p class="eyebrow">FEATURED STORIES</p>
-                <h2 id="stories-title">Stories Carried by the River</h2>
-              </div>
-              <p class="stories-intro">
-                Meet the people, traditions and stories that give the Kumbh
-                its soul.
-              </p>
-            </div>
-            <div class="stories-grid row row-cols-1 row-cols-md-3">
-              <div class="col">
-                <article class="story-card">
-                  <img src="assets/story-img-1.png" alt="Pilgrims and boats along the river ghats" width="1000"
-                    height="780" loading="lazy" />
-                  <p class="story-category">STORIES OF FAITH</p>
-                  <h3>The Sacred Cycle Returns</h3>
-                  <p class="story-excerpt">
-                    After twelve years, the Godavari awaits once more. What
-                    draws millions back to its shores?
-                  </p>
-                  <details class="story-details">
-                    <summary>
-                      <span data-en="READ STORY">READ STORY</span><span class="story-arrow" aria-hidden="true">→</span>
-                    </summary>
-                    <div class="story-body">
-                      <p>
-                        For a pilgrim, returning to the river can be a return
-                        to family memories, shared prayers and a sense of
-                        belonging. The journey begins long before the first
-                        step onto the ghats.
-                      </p>
-                      <p>
-                        At the water's edge, individual journeys become a
-                        shared moment of faith. The river connects those
-                        arriving for the first time with those carrying a
-                        lifetime of memories.
-                      </p>
-                    </div>
-                  </details>
-                </article>
-              </div>
-              <div class="col">
-                <article class="story-card">
-                  <img src="assets/story-img-2.png" alt="Saffron-clad pilgrims gathered at the Kumbh" width="1000"
-                    height="780" loading="lazy" />
-                  <p class="story-category">STORIES OF SAINTS</p>
-                  <h3>Akhara Processions Through the Ages</h3>
-                  <p class="story-excerpt">
-                    How the ancient spiritual orders have carried tradition
-                    through centuries of Kumbh.
-                  </p>
-                  <details class="story-details">
-                    <summary>
-                      <span data-en="READ STORY">READ STORY</span><span class="story-arrow" aria-hidden="true">→</span>
-                    </summary>
-                    <div class="story-body">
-                      <p>
-                        The sight of saffron robes, ceremonial banners and
-                        gathered ascetics is among the enduring images of the
-                        Kumbh. These processions bring spiritual communities
-                        into the shared life of the gathering.
-                      </p>
-                      <p>
-                        Beyond the spectacle lies a quieter story of teachers
-                        and disciples, daily practice and traditions passed
-                        from one generation to the next.
-                      </p>
-                    </div>
-                  </details>
-                </article>
-              </div>
-              <div class="col">
-                <article class="story-card">
-                  <img src="assets/story-img-3.png" alt="Temples and pilgrims at Ramkund in Nashik" width="1000"
-                    height="780" loading="lazy" />
-                  <p class="story-category">STORIES OF NASHIK</p>
-                  <h3>The City That Lives for the Kumbh</h3>
-                  <p class="story-excerpt">
-                    Nashik transforms itself every twelve years - and the
-                    transformation begins long before the first pilgrim
-                    arrives.
-                  </p>
-                  <details class="story-details">
-                    <summary>
-                      <span data-en="READ STORY">READ STORY</span><span class="story-arrow" aria-hidden="true">→</span>
-                    </summary>
-                    <div class="story-body">
-                      <p>
-                        A pilgrimage is also a meeting with a city: its
-                        riverside lanes, temple courtyards, shopkeepers and
-                        residents. In Nashik, these everyday places become
-                        part of each visitor's experience of the Kumbh.
-                      </p>
-                      <p>
-                        Behind the great gathering are countless small acts of
-                        welcome. Directions offered, food shared and space
-                        made for a traveller become stories carried home long
-                        after the journey ends.
-                      </p>
-                    </div>
-                  </details>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- News copy follows the supplied design reference. -->
-    <section class="news-section" id="news" aria-labelledby="news-title">
-      <div class="news-inner container">
-        <div class="row g-0">
-          <div class="col-12">
-            <div class="news-heading d-flex flex-wrap align-items-center justify-content-between">
-              <h2 id="news-title">News &amp; Announcements</h2>
-              <div class="news-filters d-flex flex-wrap" role="group" aria-label="Filter news">
-                <button class="btn news-filter active" type="button" data-news-filter="all" aria-pressed="true"
-                  aria-controls="news-list">
-                  <span class="control-label" data-en="ALL">ALL</span>
-                </button>
-                <button class="btn news-filter" type="button" data-news-filter="announcement" aria-pressed="false"
-                  aria-controls="news-list">
-                  <span class="control-label" data-en="Announcements">Announcements</span>
-                </button>
-                <button class="btn news-filter" type="button" data-news-filter="advisory" aria-pressed="false"
-                  aria-controls="news-list">
-                  <span class="control-label" data-en="Advisories">Advisories</span>
-                </button>
-                <button class="btn news-filter" type="button" data-news-filter="event" aria-pressed="false"
-                  aria-controls="news-list">
-                  <span class="control-label" data-en="Events">Events</span>
-                </button>
-                <button class="btn news-filter" type="button" data-news-filter="press" aria-pressed="false"
-                  aria-controls="news-list">
-                  <span class="control-label" data-en="Press">Press</span>
-                </button>
-              </div>
-            </div>
-            <div id="news-list" class="news-list" aria-live="polite">
-              <article class="news-item" data-news-category="advisory">
-                <details>
-                  <summary class="news-summary row g-0 align-items-center">
-                    <div class="news-meta col-3 col-md-1">
-                      <span class="news-badge badge-advisory" data-en="Advisory">Advisory</span><time datetime="2026-09"
-                        data-en="Sept 2026">Sept 2026</time>
-                    </div>
-                    <div class="news-copy col-8 col-md-10">
-                      <h3>Visitor Registration Opens for Kumbh 2027</h3>
-                      <p>
-                        Updated information for pilgrims and visitors planning
-                        their journey to Nashik-Trimbakeshwar Simhastha.
-                      </p>
-                    </div>
-                    <span class="news-arrow col-1 text-end" aria-hidden="true">→</span>
-                  </summary>
-                  <div class="news-detail">
-                    <p>
-                      Find visitor registration information and travel updates
-                      through the Nashik district website.
-                    </p>
-                    <a href="https://nashik.gov.in/" target="_blank" rel="noopener noreferrer"
-                      data-en="Visit the Nashik district website">Visit the Nashik district website</a>
-                  </div>
-                </details>
-              </article>
-              <article class="news-item" data-news-category="announcement">
-                <details>
-                  <summary class="news-summary row g-0 align-items-center">
-                    <div class="news-meta col-3 col-md-1">
-                      <span class="news-badge badge-announcement" data-en="Announcement">Announcement</span><time
-                        datetime="2026-09" data-en="Sept 2026">Sept 2026</time>
-                    </div>
-                    <div class="news-copy col-8 col-md-10">
-                      <h3>Official Sacred Calendar to Be Released</h3>
-                      <p>
-                        The Kumbh Mela Authority announces the upcoming
-                        release of the official ceremonial calendar for 2027.
-                      </p>
-                    </div>
-                    <span class="news-arrow col-1 text-end" aria-hidden="true">→</span>
-                  </summary>
-                  <div class="news-detail">
-                    <p>
-                      Consult official announcements for the ceremonial
-                      calendar and confirmed bathing dates before planning
-                      your visit.
-                    </p>
-                    <a href="https://nashik.gov.in/" target="_blank" rel="noopener noreferrer"
-                      data-en="Visit the Nashik district website">Visit the Nashik district website</a>
-                  </div>
-                </details>
-              </article>
-              <article class="news-item" data-news-category="event">
-                <details>
-                  <summary class="news-summary row g-0 align-items-center">
-                    <div class="news-meta col-3 col-md-1">
-                      <span class="news-badge badge-event" data-en="Event">Event</span><time datetime="2026-10"
-                        data-en="Oct 2026">Oct 2026</time>
-                    </div>
-                    <div class="news-copy col-8 col-md-10">
-                      <h3>Preparatory Cultural Events Begin Across Nashik</h3>
-                      <p>
-                        A series of pre-Kumbh cultural events, exhibitions and
-                        spiritual programmes will begin in late 2026.
-                      </p>
-                    </div>
-                    <span class="news-arrow col-1 text-end" aria-hidden="true">→</span>
-                  </summary>
-                  <div class="news-detail">
-                    <p>
-                      Check official event listings for programme dates,
-                      venues and visitor information.
-                    </p>
-                    <a href="https://nashik.gov.in/" target="_blank" rel="noopener noreferrer"
-                      data-en="Visit the Nashik district website">Visit the Nashik district website</a>
-                  </div>
-                </details>
-              </article>
-              <p class="news-empty" hidden>
-                No updates in this category yet.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="help-bar" aria-labelledby="help-title">
-      <div class="help-inner container">
-        <div class="row g-0">
-          <div class="col-12 d-flex flex-wrap align-items-center justify-content-between help-content">
-            <h2 id="help-title">NEED HELP?</h2>
-            <nav class="help-links d-flex flex-wrap" aria-label="Visitor help">
-              <a href="https://nashik.gov.in/en/helpline-3/" target="_blank" rel="noopener noreferrer"><span
-                  class="control-label" data-en="EMERGENCY">EMERGENCY</span></a>
-              <a href="https://nashik.gov.in/en/helpline-3/" target="_blank" rel="noopener noreferrer"><span
-                  class="control-label" data-en="HELPLINES">HELPLINES</span></a>
-              <button type="button" data-help-dialog="faq-dialog">
-                <span class="control-label" data-en="FAQS">FAQS</span>
-              </button>
-              <button type="button" data-help-dialog="visitor-guide-dialog">
-                <span class="control-label" data-en="DOS &amp; DON'TS">DOS &amp; DON'TS</span>
-              </button>
-              <button type="button" data-help-dialog="accessibility-dialog">
-                <span class="control-label" data-en="ACCESSIBILITY">ACCESSIBILITY</span>
-              </button>
-              <a href="https://nashik.gov.in/en/contact-us/" target="_blank" rel="noopener noreferrer"><span
-                  class="control-label" data-en="CONTACT US">CONTACT US</span></a>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="pilgrimage-banner-section" aria-labelledby="pilgrimage-banner-title">
-      <div class="container">
-        <div class="row g-0">
-          <div class="col-12">
-            <div class="pilgrimage-banner d-flex flex-column align-items-center text-center">
-              <img class="pilgrimage-banner-image" src="assets/closing-cta-image.png" alt="" width="2000" height="900"
-                loading="lazy" />
-              <p class="pilgrimage-banner-eyebrow">BEGIN YOUR PILGRIMAGE</p>
-              <h2 id="pilgrimage-banner-title">
-                <span data-en="Step Into the Sacred">Step Into the Sacred</span><span
-                  data-en="Gathering">Gathering</span>
-              </h2>
-              <p class="pilgrimage-banner-description">
-                Come with faith. Discover with wonder. Return with a story.
-              </p>
-              <button class="btn button primary pilgrimage-banner-button" type="button" data-plan>
-                <span class="control-label" data-en="BEGIN YOUR PILGRIMAGE">BEGIN YOUR PILGRIMAGE</span><span
-                  aria-hidden="true">→</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer" id="site-footer">
-    <div class="footer-inner container">
-      <div class="row g-0">
-        <div class="col-12">
-          <div class="footer-main row gy-4">
-            <div class="footer-brand col-12 col-md-4">
-              <a href="index.html" aria-label="Simhastha Kumbh home"><img src="assets/logo-new-page.png"
-                  alt="Simhastha Kumbh" width="110" height="65" loading="lazy" /></a>
-              <p>
-                Official digital gateway to Nashik-Trimbakeshwar Simhastha
-                MahaKumbhmela 2027.
-              </p>
-              <div class="footer-social d-flex" role="group" aria-label="Social media">
-                <button type="button" disabled aria-label="Facebook (coming soon)" title="Facebook (coming soon)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M14 8h3V4h-3c-4 0-5 2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-1 0-1 1-1Z" />
-                  </svg></button><button type="button" disabled aria-label="X (coming soon)" title="X (coming soon)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="m5 4 14 16h-4L1 4h4Zm-3 16L18 4" fill="none" stroke="currentColor" stroke-width="1.5" />
-                  </svg></button><button type="button" disabled aria-label="YouTube (coming soon)"
-                  title="YouTube (coming soon)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <rect x="2" y="5" width="20" height="14" rx="4" />
-                    <path d="m10 9 6 3-6 3Z" fill="#fff5e7" />
-                  </svg></button><button type="button" disabled aria-label="LinkedIn (coming soon)"
-                  title="LinkedIn (coming soon)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M3 9h4v12H3V9Zm0-6h4v4H3V3Zm7 6h4v2c1-2 7-3 7 3v7h-4v-6c0-3-3-3-3 0v6h-4V9Z" />
-                  </svg></button><button type="button" disabled aria-label="Instagram (coming soon)"
-                  title="Instagram (coming soon)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor"
-                      stroke-width="1.5" />
-                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5" />
-                    <circle cx="17.5" cy="6.5" r="1" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <nav class="footer-column col-6 col-md-3" aria-labelledby="footer-pilgrimage-title">
-              <h2 id="footer-pilgrimage-title">Nashik Pilgrimage</h2>
-              <ul class="list-unstyled">
-                <li><a href="#hero-title">About Kumbh</a></li>
-                <li><a href="#pilgrimage-highlights">Experiences</a></li>
-                <li><a href="#holy-cities">Sacred Places</a></li>
-                <li><a href="#featured-stories">Stories</a></li>
-                <li><a href="#pilgrimage-highlights">Gallery</a></li>
-              </ul>
-            </nav>
-            <nav class="footer-column col-6 col-md-3" aria-labelledby="footer-plan-title">
-              <h2 id="footer-plan-title">Plan</h2>
-              <ul class="list-unstyled">
-                <li><a href="#ceremonies">Calendar</a></li>
-                <li><a href="#travel">How to Reach</a></li>
-                <li><a href="#stay">Stay</a></li>
-                <li><a href="#transport">Transport</a></li>
-                <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#safety">Safety</a></li>
-              </ul>
-            </nav>
-            <nav class="footer-column col-6 col-md-2" aria-labelledby="footer-information-title">
-              <h2 id="footer-information-title">Information</h2>
-              <ul class="list-unstyled">
-                <li><a href="#news">News &amp; Updates</a></li>
-                <li>
-                  <button type="button" data-help-dialog="faq-dialog">
-                    <span class="control-label" data-en="FAQs">FAQs</span>
+      </section>
+      <!-- News copy follows the supplied design reference. -->
+      <section class="news-section" id="news" aria-labelledby="news-title">
+        <div class="news-inner container">
+          <div class="row g-0">
+            <div class="col-12">
+              <div
+                class="news-heading d-flex flex-wrap align-items-center justify-content-between"
+              >
+                <h2 id="news-title">News &amp; Announcements</h2>
+                <div
+                  class="news-filters d-flex flex-wrap"
+                  role="group"
+                  aria-label="Filter news"
+                >
+                  <button
+                    class="btn news-filter active"
+                    type="button"
+                    data-news-filter="all"
+                    aria-pressed="true"
+                    aria-controls="news-list"
+                  >
+                    <span class="control-label" data-en="ALL">ALL</span>
                   </button>
-                </li>
-                <li>
-                  <button type="button" data-help-dialog="accessibility-dialog">
-                    <span class="control-label" data-en="Accessibility">Accessibility</span>
+                  <button
+                    class="btn news-filter"
+                    type="button"
+                    data-news-filter="announcement"
+                    aria-pressed="false"
+                    aria-controls="news-list"
+                  >
+                    <span class="control-label" data-en="Announcements"
+                      >Announcements</span
+                    >
                   </button>
-                </li>
-                <li>
-                  <a href="https://nashik.gov.in/en/contact-us/" target="_blank" rel="noopener noreferrer">Contact</a>
-                </li>
-                <li>
-                  <a href="https://nashik.gov.in/en/helpline-3/" target="_blank" rel="noopener noreferrer">Emergency</a>
-                </li>
-              </ul>
-            </nav>
+                  <button
+                    class="btn news-filter"
+                    type="button"
+                    data-news-filter="advisory"
+                    aria-pressed="false"
+                    aria-controls="news-list"
+                  >
+                    <span class="control-label" data-en="Advisories"
+                      >Advisories</span
+                    >
+                  </button>
+                  <button
+                    class="btn news-filter"
+                    type="button"
+                    data-news-filter="event"
+                    aria-pressed="false"
+                    aria-controls="news-list"
+                  >
+                    <span class="control-label" data-en="Events">Events</span>
+                  </button>
+                  <button
+                    class="btn news-filter"
+                    type="button"
+                    data-news-filter="press"
+                    aria-pressed="false"
+                    aria-controls="news-list"
+                  >
+                    <span class="control-label" data-en="Press">Press</span>
+                  </button>
+                </div>
+              </div>
+              <div id="news-list" class="news-list" aria-live="polite">
+                <article class="news-item" data-news-category="advisory">
+                  <details>
+                    <summary class="news-summary row g-0 align-items-center">
+                      <div class="news-meta col-3 col-md-1">
+                        <span
+                          class="news-badge badge-advisory"
+                          data-en="Advisory"
+                          >Advisory</span
+                        ><time datetime="2026-09" data-en="Sept 2026"
+                          >Sept 2026</time
+                        >
+                      </div>
+                      <div class="news-copy col-8 col-md-10">
+                        <h3>Visitor Registration Opens for Kumbh 2027</h3>
+                        <p>
+                          Updated information for pilgrims and visitors planning
+                          their journey to Nashik-Trimbakeshwar Simhastha.
+                        </p>
+                      </div>
+                      <span class="news-arrow col-1 text-end" aria-hidden="true"
+                        >→</span
+                      >
+                    </summary>
+                    <div class="news-detail">
+                      <p>
+                        Find visitor registration information and travel updates
+                        through the Nashik district website.
+                      </p>
+                      <a
+                        href="https://nashik.gov.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-en="Visit the Nashik district website"
+                        >Visit the Nashik district website</a
+                      >
+                    </div>
+                  </details>
+                </article>
+                <article class="news-item" data-news-category="announcement">
+                  <details>
+                    <summary class="news-summary row g-0 align-items-center">
+                      <div class="news-meta col-3 col-md-1">
+                        <span
+                          class="news-badge badge-announcement"
+                          data-en="Announcement"
+                          >Announcement</span
+                        ><time datetime="2026-09" data-en="Sept 2026"
+                          >Sept 2026</time
+                        >
+                      </div>
+                      <div class="news-copy col-8 col-md-10">
+                        <h3>Official Sacred Calendar to Be Released</h3>
+                        <p>
+                          The Kumbh Mela Authority announces the upcoming
+                          release of the official ceremonial calendar for 2027.
+                        </p>
+                      </div>
+                      <span class="news-arrow col-1 text-end" aria-hidden="true"
+                        >→</span
+                      >
+                    </summary>
+                    <div class="news-detail">
+                      <p>
+                        Consult official announcements for the ceremonial
+                        calendar and confirmed bathing dates before planning
+                        your visit.
+                      </p>
+                      <a
+                        href="https://nashik.gov.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-en="Visit the Nashik district website"
+                        >Visit the Nashik district website</a
+                      >
+                    </div>
+                  </details>
+                </article>
+                <article class="news-item" data-news-category="event">
+                  <details>
+                    <summary class="news-summary row g-0 align-items-center">
+                      <div class="news-meta col-3 col-md-1">
+                        <span class="news-badge badge-event" data-en="Event"
+                          >Event</span
+                        ><time datetime="2026-10" data-en="Oct 2026"
+                          >Oct 2026</time
+                        >
+                      </div>
+                      <div class="news-copy col-8 col-md-10">
+                        <h3>Preparatory Cultural Events Begin Across Nashik</h3>
+                        <p>
+                          A series of pre-Kumbh cultural events, exhibitions and
+                          spiritual programmes will begin in late 2026.
+                        </p>
+                      </div>
+                      <span class="news-arrow col-1 text-end" aria-hidden="true"
+                        >→</span
+                      >
+                    </summary>
+                    <div class="news-detail">
+                      <p>
+                        Check official event listings for programme dates,
+                        venues and visitor information.
+                      </p>
+                      <a
+                        href="https://nashik.gov.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-en="Visit the Nashik district website"
+                        >Visit the Nashik district website</a
+                      >
+                    </div>
+                  </details>
+                </article>
+                <p class="news-empty" hidden>
+                  No updates in this category yet.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
-            <p data-en="Copyright 2027 Nashik-Trimbakeshwar Simhastha MahaKumbhmela. All rights reserved.">
-              &copy; 2027 Nashik-Trimbakeshwar Simhastha MahaKumbhmela. All
-              rights reserved.
-            </p>
-            <nav class="footer-legal d-flex flex-wrap" aria-label="Legal and site information">
-              <a href="https://nashik.gov.in/en/website-policies/" target="_blank" rel="noopener noreferrer">Privacy
-                Policy</a><a href="https://nashik.gov.in/en/website-policies/" target="_blank"
-                rel="noopener noreferrer">Terms &amp; Conditions</a><button type="button"
-                data-help-dialog="accessibility-dialog">
-                <span class="control-label" data-en="Accessibility">Accessibility</span></button><button type="button"
-                data-help-dialog="sitemap-dialog">
-                <span class="control-label" data-en="Sitemap">Sitemap</span>
-              </button>
-            </nav>
+        </div>
+      </section>
+      <section class="help-bar" aria-labelledby="help-title">
+        <div class="help-inner container">
+          <div class="row g-0">
+            <div
+              class="col-12 d-flex flex-wrap align-items-center justify-content-between help-content"
+            >
+              <h2 id="help-title">NEED HELP?</h2>
+              <nav
+                class="help-links d-flex flex-wrap"
+                aria-label="Visitor help"
+              >
+                <a
+                  href="https://nashik.gov.in/en/helpline-3/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><span class="control-label" data-en="EMERGENCY"
+                    >EMERGENCY</span
+                  ></a
+                >
+                <a
+                  href="https://nashik.gov.in/en/helpline-3/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><span class="control-label" data-en="HELPLINES"
+                    >HELPLINES</span
+                  ></a
+                >
+                <button type="button" data-help-dialog="faq-dialog">
+                  <span class="control-label" data-en="FAQS">FAQS</span>
+                </button>
+                <button type="button" data-help-dialog="visitor-guide-dialog">
+                  <span class="control-label" data-en="DOS &amp; DON'TS"
+                    >DOS &amp; DON'TS</span
+                  >
+                </button>
+                <button type="button" data-help-dialog="accessibility-dialog">
+                  <span class="control-label" data-en="ACCESSIBILITY"
+                    >ACCESSIBILITY</span
+                  >
+                </button>
+                <a
+                  href="https://nashik.gov.in/en/contact-us/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><span class="control-label" data-en="CONTACT US"
+                    >CONTACT US</span
+                  ></a
+                >
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="pilgrimage-banner-section"
+        aria-labelledby="pilgrimage-banner-title"
+      >
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-12">
+              <div
+                class="pilgrimage-banner d-flex flex-column align-items-center text-center"
+              >
+                <img
+                  class="pilgrimage-banner-image"
+                  src="assets/closing-cta-image.png"
+                  alt=""
+                  width="2000"
+                  height="900"
+                  loading="lazy"
+                />
+                <p class="pilgrimage-banner-eyebrow">BEGIN YOUR PILGRIMAGE</p>
+                <h2 id="pilgrimage-banner-title">
+                  <span data-en="Step Into the Sacred"
+                    >Step Into the Sacred</span
+                  ><span data-en="Gathering">Gathering</span>
+                </h2>
+                <p class="pilgrimage-banner-description">
+                  Come with faith. Discover with wonder. Return with a story.
+                </p>
+                <button
+                  class="btn button primary pilgrimage-banner-button"
+                  type="button"
+                  data-plan
+                >
+                  <span class="control-label" data-en="BEGIN YOUR PILGRIMAGE"
+                    >BEGIN YOUR PILGRIMAGE</span
+                  ><span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer">
+      <div class="footer-inner container">
+        <div class="row g-0">
+          <div class="col-12">
+            <div class="footer-main row gy-4">
+              <div class="footer-brand col-12 col-md-4">
+                <a href="index.html" aria-label="Simhastha Kumbh home"
+                  ><img
+                    src="assets/logo-new-page.png"
+                    alt="Simhastha Kumbh"
+                    width="110"
+                    height="65"
+                    loading="lazy"
+                /></a>
+                <p>
+                  Official digital gateway to Nashik-Trimbakeshwar Simhastha
+                  MahaKumbhmela 2027.
+                </p>
+                <div
+                  class="footer-social d-flex"
+                  role="group"
+                  aria-label="Social media"
+                >
+                  <button
+                    type="button"
+                    disabled
+                    aria-label="Facebook (coming soon)"
+                    title="Facebook (coming soon)"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M14 8h3V4h-3c-4 0-5 2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-1 0-1 1-1Z"
+                      />
+                    </svg></button
+                  ><button
+                    type="button"
+                    disabled
+                    aria-label="X (coming soon)"
+                    title="X (coming soon)"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="m5 4 14 16h-4L1 4h4Zm-3 16L18 4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                    </svg></button
+                  ><button
+                    type="button"
+                    disabled
+                    aria-label="YouTube (coming soon)"
+                    title="YouTube (coming soon)"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="2" y="5" width="20" height="14" rx="4" />
+                      <path d="m10 9 6 3-6 3Z" fill="#fff5e7" />
+                    </svg></button
+                  ><button
+                    type="button"
+                    disabled
+                    aria-label="LinkedIn (coming soon)"
+                    title="LinkedIn (coming soon)"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M3 9h4v12H3V9Zm0-6h4v4H3V3Zm7 6h4v2c1-2 7-3 7 3v7h-4v-6c0-3-3-3-3 0v6h-4V9Z"
+                      />
+                    </svg></button
+                  ><button
+                    type="button"
+                    disabled
+                    aria-label="Instagram (coming soon)"
+                    title="Instagram (coming soon)"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      />
+                      <circle cx="17.5" cy="6.5" r="1" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <nav
+                class="footer-column col-6 col-md-3"
+                aria-labelledby="footer-pilgrimage-title"
+              >
+                <h2 id="footer-pilgrimage-title">Nashik Pilgrimage</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#hero-title">About Kumbh</a></li>
+                  <li><a href="#pilgrimage-highlights">Experiences</a></li>
+                  <li><a href="#holy-cities">Sacred Places</a></li>
+                  <li><a href="#featured-stories">Stories</a></li>
+                  <li><a href="#pilgrimage-highlights">Gallery</a></li>
+                </ul>
+              </nav>
+              <nav
+                class="footer-column col-6 col-md-3"
+                aria-labelledby="footer-plan-title"
+              >
+                <h2 id="footer-plan-title">Plan</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#ceremonies">Calendar</a></li>
+                  <li><a href="#travel">How to Reach</a></li>
+                  <li><a href="#stay">Stay</a></li>
+                  <li><a href="#transport">Transport</a></li>
+                  <li><a href="#facilities">Facilities</a></li>
+                  <li><a href="#safety">Safety</a></li>
+                </ul>
+              </nav>
+              <nav
+                class="footer-column col-6 col-md-2"
+                aria-labelledby="footer-information-title"
+              >
+                <h2 id="footer-information-title">Information</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#news">News &amp; Updates</a></li>
+                  <li>
+                    <button type="button" data-help-dialog="faq-dialog">
+                      <span class="control-label" data-en="FAQs">FAQs</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      data-help-dialog="accessibility-dialog"
+                    >
+                      <span class="control-label" data-en="Accessibility"
+                        >Accessibility</span
+                      >
+                    </button>
+                  </li>
+                  <li>
+                    <a
+                      href="https://nashik.gov.in/en/contact-us/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Contact</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://nashik.gov.in/en/helpline-3/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Emergency</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div
+              class="footer-bottom d-flex flex-wrap justify-content-between align-items-center"
+            >
+              <p
+                data-en="Copyright 2027 Nashik-Trimbakeshwar Simhastha MahaKumbhmela. All rights reserved."
+              >
+                &copy; 2027 Nashik-Trimbakeshwar Simhastha MahaKumbhmela. All
+                rights reserved.
+              </p>
+              <nav
+                class="footer-legal d-flex flex-wrap"
+                aria-label="Legal and site information"
+              >
+                <a
+                  href="https://nashik.gov.in/en/website-policies/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Privacy Policy</a
+                ><a
+                  href="https://nashik.gov.in/en/website-policies/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Terms &amp; Conditions</a
+                ><button type="button" data-help-dialog="accessibility-dialog">
+                  <span class="control-label" data-en="Accessibility"
+                    >Accessibility</span
+                  ></button
+                ><button type="button" data-help-dialog="sitemap-dialog">
+                  <span class="control-label" data-en="Sitemap">Sitemap</span>
+                </button>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <dialog id="sitemap-dialog" class="plan-dialog" aria-labelledby="sitemap-title">
-    <button class="close" type="button" aria-label="Close guide">
-      &times;
-    </button>
-    <h2 id="sitemap-title">Sitemap</h2>
-    <nav class="sitemap-links" aria-label="Page sections">
-      <a href="#hero-title">About Kumbh</a><a href="#plan-your-visit">Plan your pilgrimage</a><a
-        href="#ceremonies">Calendar</a><a href="#pilgrimage-highlights">Experiences</a><a href="#holy-cities">Sacred
-        Places</a><a href="#featured-stories">Stories</a><a href="#news">News &amp; Updates</a>
-    </nav>
-  </dialog>
+    </footer>
+    <dialog
+      id="sitemap-dialog"
+      class="plan-dialog"
+      aria-labelledby="sitemap-title"
+    >
+      <button class="close" type="button" aria-label="Close guide">
+        &times;
+      </button>
+      <h2 id="sitemap-title">Sitemap</h2>
+      <nav class="sitemap-links" aria-label="Page sections">
+        <a href="#hero-title">About Kumbh</a
+        ><a href="#plan-your-visit">Plan your pilgrimage</a
+        ><a href="#ceremonies">Calendar</a
+        ><a href="#pilgrimage-highlights">Experiences</a
+        ><a href="#holy-cities">Sacred Places</a
+        ><a href="#featured-stories">Stories</a
+        ><a href="#news">News &amp; Updates</a>
+      </nav>
+    </dialog>
 
-  <dialog id="faq-dialog" class="plan-dialog" aria-labelledby="faq-title">
-    <button class="close" type="button" aria-label="Close guide">
-      &times;
-    </button>
-    <h2 id="faq-title">Frequently Asked Questions</h2>
-    <h3 class="help-question">Where can I plan my visit?</h3>
-    <p>
-      Explore the journey planning section for travel, accommodation and local
-      transport topics.
-    </p>
-    <h3 class="help-question">Where can I find current announcements?</h3>
-    <p>
-      Check the Nashik district website for official visitor information and
-      updates.
-    </p>
-    <a class="help-resource" href="https://nashik.gov.in/" target="_blank" rel="noopener noreferrer"
-      data-en="Visit the Nashik district website">Visit the Nashik district website</a>
-  </dialog>
-  <dialog id="visitor-guide-dialog" class="plan-dialog" aria-labelledby="visitor-guide-title">
-    <button class="close" type="button" aria-label="Close guide">
-      &times;
-    </button>
-    <h2 id="visitor-guide-title">Visitor Etiquette</h2>
-    <ul class="help-tips">
-      <li>Follow posted signs and instructions from local staff.</li>
-      <li>Respect worshippers and ask before taking their photograph.</li>
-      <li>Use designated bins and keep the river and ghats clean.</li>
-      <li>Keep entrances and walking routes clear.</li>
-    </ul>
-  </dialog>
-  <dialog id="accessibility-dialog" class="plan-dialog" aria-labelledby="accessibility-title">
-    <button class="close" type="button" aria-label="Close guide">
-      &times;
-    </button>
-    <h2 id="accessibility-title">Accessibility</h2>
-    <p>
-      Contact local visitor services before travelling to confirm step-free
-      routes, accessible facilities and assistance at your destination.
-    </p>
-    <a class="help-resource" href="https://nashik.gov.in/en/helpline-3/" target="_blank" rel="noopener noreferrer">View
-      district helplines</a>
-  </dialog>
-  <dialog id="screen-reader-dialog" class="plan-dialog" aria-labelledby="screen-reader-title">
-    <button class="close" type="button" aria-label="Close guide">
-      &times;
-    </button>
-    <h2 id="screen-reader-title">Screen Reader Access</h2>
-    <p>
-      Use your screen reader to navigate by headings, links and landmarks. The
-      skip link moves focus directly to the main content.
-    </p>
-    <p>
-      Use Tab to move between controls, Enter to follow links, and Escape to
-      close dialogs. Change your device motion preferences to reduce
-      animations.
-    </p>
-  </dialog>
-  <dialog id="film-dialog" aria-label="A journey of faith film">
-    <button class="close" aria-label="Close video">&times;</button><video controls playsinline preload="none"
-      src="video1.mp4"></video>
-  </dialog>
-  <dialog id="plan-dialog" class="plan-dialog" aria-labelledby="plan-title">
-    <button class="close" aria-label="Close guide">&times;</button>
-    <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
-    <h2 id="plan-title">Plan your pilgrimage</h2>
-    <p>Explore the sacred banks of the Godavari and the temples of Nashik.</p>
-    <p>
-      Arrange your travel and accommodation in advance, and follow local
-      guidance during your visit.
-    </p>
-    <a class="btn button primary" href="https://nashik.gov.in/tourism/" target="_blank"
-      rel="noopener noreferrer">EXPLORE NASHIK ↗</a>
-  </dialog>
+    <dialog id="faq-dialog" class="plan-dialog" aria-labelledby="faq-title">
+      <button class="close" type="button" aria-label="Close guide">
+        &times;
+      </button>
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <h3 class="help-question">Where can I plan my visit?</h3>
+      <p>
+        Explore the journey planning section for travel, accommodation and local
+        transport topics.
+      </p>
+      <h3 class="help-question">Where can I find current announcements?</h3>
+      <p>
+        Check the Nashik district website for official visitor information and
+        updates.
+      </p>
+      <a
+        class="help-resource"
+        href="https://nashik.gov.in/"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-en="Visit the Nashik district website"
+        >Visit the Nashik district website</a
+      >
+    </dialog>
+    <dialog
+      id="visitor-guide-dialog"
+      class="plan-dialog"
+      aria-labelledby="visitor-guide-title"
+    >
+      <button class="close" type="button" aria-label="Close guide">
+        &times;
+      </button>
+      <h2 id="visitor-guide-title">Visitor Etiquette</h2>
+      <ul class="help-tips">
+        <li>Follow posted signs and instructions from local staff.</li>
+        <li>Respect worshippers and ask before taking their photograph.</li>
+        <li>Use designated bins and keep the river and ghats clean.</li>
+        <li>Keep entrances and walking routes clear.</li>
+      </ul>
+    </dialog>
+    <dialog
+      id="accessibility-dialog"
+      class="plan-dialog"
+      aria-labelledby="accessibility-title"
+    >
+      <button class="close" type="button" aria-label="Close guide">
+        &times;
+      </button>
+      <h2 id="accessibility-title">Accessibility</h2>
+      <p>
+        Contact local visitor services before travelling to confirm step-free
+        routes, accessible facilities and assistance at your destination.
+      </p>
+      <a
+        class="help-resource"
+        href="https://nashik.gov.in/en/helpline-3/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >View district helplines</a
+      >
+    </dialog>
+    <dialog
+      id="screen-reader-dialog"
+      class="plan-dialog"
+      aria-labelledby="screen-reader-title"
+    >
+      <button class="close" type="button" aria-label="Close guide">
+        &times;
+      </button>
+      <h2 id="screen-reader-title">Screen Reader Access</h2>
+      <p>
+        Use your screen reader to navigate by headings, links and landmarks. The
+        skip link moves focus directly to the main content.
+      </p>
+      <p>
+        Use Tab to move between controls, Enter to follow links, and Escape to
+        close dialogs. Change your device motion preferences to reduce
+        animations.
+      </p>
+    </dialog>
+    <dialog id="film-dialog" aria-label="A journey of faith film">
+      <button class="close" aria-label="Close video">&times;</button
+      ><video controls playsinline preload="none" src="video1.mp4"></video>
+    </dialog>
+    <dialog id="plan-dialog" class="plan-dialog" aria-labelledby="plan-title">
+      <button class="close" aria-label="Close guide">&times;</button>
+      <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+      <h2 id="plan-title">Plan your pilgrimage</h2>
+      <p>Explore the sacred banks of the Godavari and the temples of Nashik.</p>
+      <p>
+        Arrange your travel and accommodation in advance, and follow local
+        guidance during your visit.
+      </p>
+      <a
+        class="btn button primary"
+        href="https://nashik.gov.in/tourism/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >EXPLORE NASHIK ↗</a
+      >
+    </dialog>
 
-  <!-- Sticky Right Navigation Panel -->
-  <aside class="sticky-right-panel" aria-label="Quick Access Panel">
-    <a href="#ceremonies" class="sticky-panel-item" id="sticky-calendar-btn" title="Calendar">
-      <div class="sticky-icon-wrapper calendar-icon-bg">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="3" y="4" width="18" height="18" rx="3" ry="3"></rect>
-          <line x1="16" y1="2" x2="16" y2="6"></line>
-          <line x1="8" y1="2" x2="8" y2="6"></line>
-          <line x1="3" y1="10" x2="21" y2="10"></line>
-          <rect x="7" y="13" width="3.5" height="3.5" fill="#e55300" stroke="none" rx="0.5"></rect>
-          <rect x="13.5" y="13" width="3.5" height="3.5" fill="#e55300" stroke="none" rx="0.5"></rect>
-        </svg>
-      </div>
-      <span class="sticky-label" data-en="Calendar">Calendar</span>
-    </a>
-
-    <div class="sticky-divider"></div>
-
-    <button type="button" class="sticky-panel-item" id="sticky-sos-btn" data-help-dialog="sos-dialog"
-      aria-label="Emergency SOS" title="SOS Emergency Assistance">
-      <div class="sticky-icon-wrapper sos-icon-bg">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="2.5" fill="currentColor"></circle>
-          <path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49"></path>
-          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"></path>
-        </svg>
-      </div>
-      <span class="sticky-label sos-text" data-en="SOS">SOS</span>
-    </button>
-
-    <div class="sticky-divider"></div>
-
-    <button type="button" class="sticky-panel-item" id="sticky-kumbhdoot-btn" data-help-dialog="kumbhdoot-dialog"
-      aria-label="KumbhDoot Assistant" title="KumbhDoot - Ask Now">
-      <div class="sticky-icon-wrapper kumbhdoot-icon-bg">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path
-            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
-            fill="none" stroke="#1a1a1a" stroke-width="2.2"></path>
-        </svg>
-      </div>
-      <span class="sticky-label kumbhdoot-text" data-en="KumbhDoot">KumbhDoot</span>
-      <span class="sticky-sublabel" data-en="Ask Now">Ask Now</span>
-    </button>
-  </aside>
-
-  <dialog id="sos-dialog" class="plan-dialog sos-modal" aria-labelledby="sos-title">
-    <button class="close" type="button" aria-label="Close emergency SOS">
-      &times;
-    </button>
-    <div class="sos-header">
-      <div class="sos-badge-icon">
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="2.5" fill="currentColor" />
-          <path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49" />
-          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14" />
-        </svg>
-      </div>
-      <div>
-        <p class="eyebrow emergency-eyebrow" data-en="EMERGENCY ASSISTANCE">
-          EMERGENCY ASSISTANCE
-        </p>
-        <h2 id="sos-title" data-en="Emergency SOS Helplines">
-          Emergency SOS Helplines
-        </h2>
-      </div>
-    </div>
-    <p class="sos-desc"
-      data-en="Immediate emergency services & helpline support for pilgrims at Nashik-Trimbakeshwar Kumbh Mela.">
-      Immediate emergency services &amp; helpline support for pilgrims at
-      Nashik-Trimbakeshwar Kumbh Mela.
-    </p>
-    <div class="sos-grid">
-      <a href="tel:108" class="sos-card highlight">
-        <div class="sos-icon">🚑</div>
-        <div class="sos-info">
-          <span class="sos-number">108</span>
-          <span class="sos-name" data-en="Medical Emergency / Ambulance">Medical Emergency / Ambulance</span>
+    <!-- Sticky Right Navigation Panel -->
+    <aside class="sticky-right-panel" aria-label="Quick Access Panel">
+      <a
+        href="#ceremonies"
+        class="sticky-panel-item"
+        id="sticky-calendar-btn"
+        title="Calendar"
+      >
+        <div class="sticky-icon-wrapper calendar-icon-bg">
+          <svg
+            viewBox="0 0 24 24"
+            width="26"
+            height="26"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="3" ry="3"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+            <rect
+              x="7"
+              y="13"
+              width="3.5"
+              height="3.5"
+              fill="#e55300"
+              stroke="none"
+              rx="0.5"
+            ></rect>
+            <rect
+              x="13.5"
+              y="13"
+              width="3.5"
+              height="3.5"
+              fill="#e55300"
+              stroke="none"
+              rx="0.5"
+            ></rect>
+          </svg>
         </div>
-        <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
+        <span class="sticky-label" data-en="Calendar">Calendar</span>
       </a>
-      <a href="tel:112" class="sos-card">
-        <div class="sos-icon">🚓</div>
-        <div class="sos-info">
-          <span class="sos-number">112 / 100</span>
-          <span class="sos-name" data-en="Police Control Room">Police Control Room</span>
-        </div>
-        <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
-      </a>
-      <a href="tel:1077" class="sos-card">
-        <div class="sos-icon">🌊</div>
-        <div class="sos-info">
-          <span class="sos-number">1077</span>
-          <span class="sos-name" data-en="Disaster Management Control">Disaster Management Control</span>
-        </div>
-        <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
-      </a>
-      <a href="tel:1091" class="sos-card">
-        <div class="sos-icon">👩</div>
-        <div class="sos-info">
-          <span class="sos-number">1091</span>
-          <span class="sos-name" data-en="Women Helpline">Women Helpline</span>
-        </div>
-        <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
-      </a>
-      <a href="tel:101" class="sos-card">
-        <div class="sos-icon">🚒</div>
-        <div class="sos-info">
-          <span class="sos-number">101</span>
-          <span class="sos-name" data-en="Fire Brigade">Fire Brigade</span>
-        </div>
-        <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
-      </a>
-      <a href="tel:02532317151" class="sos-card">
-        <div class="sos-icon">📞</div>
-        <div class="sos-info">
-          <span class="sos-number">0253-2317151</span>
-          <span class="sos-name" data-en="District Helpline Nashik">District Helpline Nashik</span>
-        </div>
-        <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
-      </a>
-    </div>
-  </dialog>
 
-  <dialog id="kumbhdoot-dialog" class="plan-dialog kumbhdoot-modal" aria-labelledby="kumbhdoot-title">
-    <button class="close" type="button" aria-label="Close KumbhDoot assistant">
-      &times;
-    </button>
-    <div class="kd-header d-flex align-items-center gap-3">
-      <div class="kd-avatar">
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#1a1a1a" stroke-width="2">
-          <path
-            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
-            stroke-width="2.2" />
-        </svg>
-      </div>
-      <div>
-        <p class="eyebrow mb-0" data-en="AI PILGRIM ASSISTANT">
-          AI PILGRIM ASSISTANT
-        </p>
-        <h2 id="kumbhdoot-title" class="mb-0" data-en="KumbhDoot - Ask Anything">
-          KumbhDoot - Ask Anything
-        </h2>
-      </div>
-    </div>
-    <div class="kd-chat-body" id="kd-chat-messages">
-      <div class="kd-msg bot">
-        <div class="kd-msg-bubble">
-          <p
-            data-en="Namaste! 🙏 I am KumbhDoot, your digital guide for Simhastha Kumbh Mela 2027. How can I help you today?">
-            Namaste! 🙏 I am <strong>KumbhDoot</strong>, your digital guide
-            for Simhastha Kumbh Mela 2027. How can I help you today?
+      <div class="sticky-divider"></div>
+
+      <button
+        type="button"
+        class="sticky-panel-item"
+        id="sticky-sos-btn"
+        data-help-dialog="sos-dialog"
+        aria-label="Emergency SOS"
+        title="SOS Emergency Assistance"
+      >
+        <div class="sticky-icon-wrapper sos-icon-bg">
+          <svg
+            viewBox="0 0 24 24"
+            width="26"
+            height="26"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="2.5" fill="currentColor"></circle>
+            <path
+              d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49"
+            ></path>
+            <path
+              d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"
+            ></path>
+          </svg>
+        </div>
+        <span class="sticky-label sos-text" data-en="SOS">SOS</span>
+      </button>
+
+      <div class="sticky-divider"></div>
+
+      <button
+        type="button"
+        class="sticky-panel-item"
+        id="sticky-kumbhdoot-btn"
+        data-help-dialog="kumbhdoot-dialog"
+        aria-label="KumbhDoot Assistant"
+        title="KumbhDoot - Ask Now"
+      >
+        <div class="sticky-icon-wrapper kumbhdoot-icon-bg">
+          <svg
+            viewBox="0 0 24 24"
+            width="26"
+            height="26"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+              fill="none"
+              stroke="#1a1a1a"
+              stroke-width="2.2"
+            ></path>
+          </svg>
+        </div>
+        <span class="sticky-label kumbhdoot-text" data-en="KumbhDoot"
+          >KumbhDoot</span
+        >
+        <span class="sticky-sublabel" data-en="Ask Now">Ask Now</span>
+      </button>
+    </aside>
+
+    <dialog
+      id="sos-dialog"
+      class="plan-dialog sos-modal"
+      aria-labelledby="sos-title"
+    >
+      <button class="close" type="button" aria-label="Close emergency SOS">
+        &times;
+      </button>
+      <div class="sos-header">
+        <div class="sos-badge-icon">
+          <svg
+            viewBox="0 0 24 24"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+            <path
+              d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49"
+            />
+            <path
+              d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"
+            />
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow emergency-eyebrow" data-en="EMERGENCY ASSISTANCE">
+            EMERGENCY ASSISTANCE
           </p>
+          <h2 id="sos-title" data-en="Emergency SOS Helplines">
+            Emergency SOS Helplines
+          </h2>
         </div>
       </div>
-    </div>
-    <div class="kd-suggestions d-flex flex-wrap gap-2">
-      <button type="button" class="kd-chip" data-query="Shahi Snan Dates">
-        🗓️ Shahi Snan Dates
+      <p
+        class="sos-desc"
+        data-en="Immediate emergency services & helpline support for pilgrims at Nashik-Trimbakeshwar Kumbh Mela."
+      >
+        Immediate emergency services &amp; helpline support for pilgrims at
+        Nashik-Trimbakeshwar Kumbh Mela.
+      </p>
+      <div class="sos-grid">
+        <a href="tel:108" class="sos-card highlight">
+          <div class="sos-icon">🚑</div>
+          <div class="sos-info">
+            <span class="sos-number">108</span>
+            <span class="sos-name" data-en="Medical Emergency / Ambulance"
+              >Medical Emergency / Ambulance</span
+            >
+          </div>
+          <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
+        </a>
+        <a href="tel:112" class="sos-card">
+          <div class="sos-icon">🚓</div>
+          <div class="sos-info">
+            <span class="sos-number">112 / 100</span>
+            <span class="sos-name" data-en="Police Control Room"
+              >Police Control Room</span
+            >
+          </div>
+          <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
+        </a>
+        <a href="tel:1077" class="sos-card">
+          <div class="sos-icon">🌊</div>
+          <div class="sos-info">
+            <span class="sos-number">1077</span>
+            <span class="sos-name" data-en="Disaster Management Control"
+              >Disaster Management Control</span
+            >
+          </div>
+          <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
+        </a>
+        <a href="tel:1091" class="sos-card">
+          <div class="sos-icon">👩</div>
+          <div class="sos-info">
+            <span class="sos-number">1091</span>
+            <span class="sos-name" data-en="Women Helpline"
+              >Women Helpline</span
+            >
+          </div>
+          <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
+        </a>
+        <a href="tel:101" class="sos-card">
+          <div class="sos-icon">🚒</div>
+          <div class="sos-info">
+            <span class="sos-number">101</span>
+            <span class="sos-name" data-en="Fire Brigade">Fire Brigade</span>
+          </div>
+          <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
+        </a>
+        <a href="tel:02532317151" class="sos-card">
+          <div class="sos-icon">📞</div>
+          <div class="sos-info">
+            <span class="sos-number">0253-2317151</span>
+            <span class="sos-name" data-en="District Helpline Nashik"
+              >District Helpline Nashik</span
+            >
+          </div>
+          <span class="sos-call-btn" data-en="Call Now">Call ↗</span>
+        </a>
+      </div>
+    </dialog>
+
+    <dialog
+      id="kumbhdoot-dialog"
+      class="plan-dialog kumbhdoot-modal"
+      aria-labelledby="kumbhdoot-title"
+    >
+      <button
+        class="close"
+        type="button"
+        aria-label="Close KumbhDoot assistant"
+      >
+        &times;
       </button>
-      <button type="button" class="kd-chip" data-query="Where to Stay">
-        🏨 Where to Stay
-      </button>
-      <button type="button" class="kd-chip" data-query="How to Reach Ramkund">
-        🛕 Ramkund Ghat
-      </button>
-      <button type="button" class="kd-chip" data-query="Helpline Numbers">
-        🆘 Emergency Contacts
-      </button>
-    </div>
-    <form id="kd-chat-form" class="kd-chat-input-form mt-2">
-      <input type="text" id="kd-user-input" placeholder="Type your question here..." autocomplete="off" required />
-      <button type="submit" class="kd-send-btn">
-        <span data-en="Send">Send</span>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="22" y1="2" x2="11" y2="13"></line>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-        </svg>
-      </button>
-    </form>
-  </dialog>
+      <div class="kd-header d-flex align-items-center gap-3">
+        <div class="kd-avatar">
+          <svg
+            viewBox="0 0 24 24"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="#1a1a1a"
+            stroke-width="2"
+          >
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+              stroke-width="2.2"
+            />
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow mb-0" data-en="AI PILGRIM ASSISTANT">
+            AI PILGRIM ASSISTANT
+          </p>
+          <h2
+            id="kumbhdoot-title"
+            class="mb-0"
+            data-en="KumbhDoot - Ask Anything"
+          >
+            KumbhDoot - Ask Anything
+          </h2>
+        </div>
+      </div>
+      <div class="kd-chat-body" id="kd-chat-messages">
+        <div class="kd-msg bot">
+          <div class="kd-msg-bubble">
+            <p
+              data-en="Namaste! 🙏 I am KumbhDoot, your digital guide for Simhastha Kumbh Mela 2027. How can I help you today?"
+            >
+              Namaste! 🙏 I am <strong>KumbhDoot</strong>, your digital guide
+              for Simhastha Kumbh Mela 2027. How can I help you today?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="kd-suggestions d-flex flex-wrap gap-2">
+        <button type="button" class="kd-chip" data-query="Shahi Snan Dates">
+          🗓️ Shahi Snan Dates
+        </button>
+        <button type="button" class="kd-chip" data-query="Where to Stay">
+          🏨 Where to Stay
+        </button>
+        <button type="button" class="kd-chip" data-query="How to Reach Ramkund">
+          🛕 Ramkund Ghat
+        </button>
+        <button type="button" class="kd-chip" data-query="Helpline Numbers">
+          🆘 Emergency Contacts
+        </button>
+      </div>
+      <form id="kd-chat-form" class="kd-chat-input-form mt-2">
+        <input
+          type="text"
+          id="kd-user-input"
+          placeholder="Type your question here..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="kd-send-btn">
+          <span data-en="Send">Send</span>
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </dialog>
 
-  <script>
-    document.querySelectorAll("[data-help-dialog]").forEach((button) => {
-      button.addEventListener("click", () =>
-        document.getElementById(button.dataset.helpDialog).showModal(),
-      );
-    });
-
-    // Calendar smooth scroll link handler
-    document
-      .getElementById("sticky-calendar-btn")
-      ?.addEventListener("click", (e) => {
-        e.preventDefault();
-        const ceremoniesSection = document.getElementById("ceremonies");
-        if (ceremoniesSection) {
-          ceremoniesSection.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-
-    // KumbhDoot Chatbot interaction handler
-    const kdForm = document.getElementById("kd-chat-form");
-    const kdInput = document.getElementById("kd-user-input");
-    const kdMessages = document.getElementById("kd-chat-messages");
-
-    const kdResponses = {
-      "shahi snan dates":
-        "🚩 Key Ceremonies & Shahi Snan Dates for Simhastha Kumbh 2027:\n• Dhwajarohan: Ashwina Purnima\n• 1st Amrit Snan: Kartika Purnima\n• Main Royal Shahi Snan: Mauni Amavasya\n• Spring Bathing: Vasanta Panchami",
-      "where to stay":
-        '🏨 Stay Options:\nNumerous Hotels, Dharamshalas, and Pilgrim Camps are available around Nashik and Trimbakeshwar. Check the "Where to Stay" section under Plan Your Visit for full details.',
-      "how to reach ramkund":
-        "🛕 Ramkund Ghat:\nLocated along the Godavari River in Nashik. Shuttle buses and dedicated walking corridors connect directly from all major transit hubs.",
-      "helpline numbers":
-        "🆘 Emergency Helplines:\n• Ambulance: 108\n• Police: 112 / 100\n• Disaster Control: 1077\n• Women Helpline: 1091",
-    };
-
-    function addKdMessage(text, sender) {
-      if (!kdMessages) return;
-      const msgDiv = document.createElement("div");
-      msgDiv.className = `kd-msg ${sender}`;
-      const bubble = document.createElement("div");
-      bubble.className = "kd-msg-bubble";
-      const p = document.createElement("p");
-      p.innerText = text;
-      bubble.appendChild(p);
-      msgDiv.appendChild(bubble);
-      kdMessages.appendChild(msgDiv);
-      kdMessages.scrollTop = kdMessages.scrollHeight;
-    }
-
-    function processKdQuery(query) {
-      addKdMessage(query, "user");
-      setTimeout(() => {
-        const qLower = query.toLowerCase();
-        let reply =
-          'Namaste! For comprehensive Kumbh guidance, please explore our "Plan Your Visit" section or reach out to the District Helpline at 0253-2317151.';
-        if (
-          qLower.includes("snan") ||
-          qLower.includes("date") ||
-          qLower.includes("calendar")
-        ) {
-          reply = kdResponses["shahi snan dates"];
-        } else if (
-          qLower.includes("stay") ||
-          qLower.includes("hotel") ||
-          qLower.includes("camp") ||
-          qLower.includes("dharamshala")
-        ) {
-          reply = kdResponses["where to stay"];
-        } else if (
-          qLower.includes("reach") ||
-          qLower.includes("ramkund") ||
-          qLower.includes("ghat") ||
-          qLower.includes("route") ||
-          qLower.includes("transport")
-        ) {
-          reply = kdResponses["how to reach ramkund"];
-        } else if (
-          qLower.includes("helpline") ||
-          qLower.includes("emergency") ||
-          qLower.includes("police") ||
-          qLower.includes("sos") ||
-          qLower.includes("number")
-        ) {
-          reply = kdResponses["helpline numbers"];
-        }
-        addKdMessage(reply, "bot");
-      }, 350);
-    }
-
-    if (kdForm) {
-      kdForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const val = kdInput.value.trim();
-        if (val) {
-          processKdQuery(val);
-          kdInput.value = "";
-        }
-      });
-    }
-
-    document.querySelectorAll(".kd-chip").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        const q = chip.dataset.query || chip.innerText;
-        processKdQuery(q);
-      });
-    });
-    document
-      .querySelectorAll(".sitemap-links a")
-      .forEach((link) =>
-        link.addEventListener("click", () =>
-          document.getElementById("sitemap-dialog").close(),
-        ),
-      );
-    const filmDialog = document.getElementById("film-dialog");
-    const planDialog = document.getElementById("plan-dialog");
-    const film = filmDialog.querySelector("video");
-    function openFilm(source = "video1.mp4") {
-      if (film.getAttribute("src") !== source) {
-        film.src = source;
-        film.load();
-      }
-      filmDialog.showModal();
-      film.play().catch(() => { });
-    }
-    document
-      .querySelectorAll("[data-video]")
-      .forEach((button) =>
+    <script>
+      document.querySelectorAll("[data-help-dialog]").forEach((button) => {
         button.addEventListener("click", () =>
-          openFilm(button.dataset.video || "video1.mp4"),
-        ),
-      );
-    document
-      .querySelectorAll("[data-plan]")
-      .forEach((button) =>
-        button.addEventListener("click", () => planDialog.showModal()),
-      );
-    document.querySelectorAll("dialog").forEach((dialog) => {
-      dialog
-        .querySelector(".close")
-        .addEventListener("click", () => dialog.close());
-      dialog.addEventListener("click", (event) => {
-        if (event.target === dialog) {
-          const r = dialog.getBoundingClientRect();
-          if (
-            event.clientX < r.left ||
-            event.clientX > r.right ||
-            event.clientY < r.top ||
-            event.clientY > r.bottom
-          )
-            dialog.close();
-        }
+          document.getElementById(button.dataset.helpDialog).showModal(),
+        );
       });
-    });
-    filmDialog.addEventListener("close", () => film.pause());
-    const panels = [
-      ["menu-toggle", "site-menu"],
-      ["search-toggle", "search-form"],
-    ];
-    function closePanels() {
-      panels.forEach(([b, p]) => {
-        document.getElementById(p).hidden = true;
-        document.getElementById(b).setAttribute("aria-expanded", "false");
-      });
-    }
-    panels.forEach(([b, p]) => {
-      document.getElementById(b).addEventListener("click", () => {
-        const panel = document.getElementById(p),
-          opening = panel.hidden;
-        closePanels();
-        panel.hidden = !opening;
-        document
-          .getElementById(b)
-          .setAttribute("aria-expanded", String(opening));
-        if (opening && p === "search-form")
-          document.getElementById("search").focus();
-      });
-    });
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closePanels();
-    });
-    document
-      .getElementById("search-form")
-      .addEventListener("submit", (event) => {
-        event.preventDefault();
-        const query = document
-          .getElementById("search")
-          .value.trim()
-          .toLowerCase();
-        if (!query) return;
-        if (/story|video|film|कहानी|वीडियो|फ़िल्म|फिल्म/.test(query))
-          openFilm();
-        else if (
-          /plan|pilgrim|travel|nashik|योजना|तीर्थ|यात्रा|नाशिक|नासिक/.test(
-            query,
-          )
-        )
-          planDialog.showModal();
-        else
-          window.updateSearchResult(
-            document
-              .querySelector("main")
-              .textContent.toLowerCase()
-              .includes(query),
-          );
-      });
-  </script>
-  <script defer src="new-page-accessibility.js"></script>
-  <script defer src="new-page-search.js"></script>
-  <script defer src="new-page-i18n.js"></script>
-  <script defer src="new-page-ceremonies.js"></script>
-  <script defer src="new-page-news.js"></script>
-  <!-- Animation libs: loaded async, animations.js waits for them via guards -->
-  <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
-  <script defer src="new-page-scroll.js"></script>
-  <script defer src="new-page-animations.js"></script>
-</body>
 
+      // Calendar smooth scroll link handler
+      document
+        .getElementById("sticky-calendar-btn")
+        ?.addEventListener("click", (e) => {
+          e.preventDefault();
+          const ceremoniesSection = document.getElementById("ceremonies");
+          if (ceremoniesSection) {
+            ceremoniesSection.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+
+      // KumbhDoot Chatbot interaction handler
+      const kdForm = document.getElementById("kd-chat-form");
+      const kdInput = document.getElementById("kd-user-input");
+      const kdMessages = document.getElementById("kd-chat-messages");
+
+      const kdResponses = {
+        "shahi snan dates":
+          "🚩 Key Ceremonies & Shahi Snan Dates for Simhastha Kumbh 2027:\n• Dhwajarohan: Ashwina Purnima\n• 1st Amrit Snan: Kartika Purnima\n• Main Royal Shahi Snan: Mauni Amavasya\n• Spring Bathing: Vasanta Panchami",
+        "where to stay":
+          '🏨 Stay Options:\nNumerous Hotels, Dharamshalas, and Pilgrim Camps are available around Nashik and Trimbakeshwar. Check the "Where to Stay" section under Plan Your Visit for full details.',
+        "how to reach ramkund":
+          "🛕 Ramkund Ghat:\nLocated along the Godavari River in Nashik. Shuttle buses and dedicated walking corridors connect directly from all major transit hubs.",
+        "helpline numbers":
+          "🆘 Emergency Helplines:\n• Ambulance: 108\n• Police: 112 / 100\n• Disaster Control: 1077\n• Women Helpline: 1091",
+      };
+
+      function addKdMessage(text, sender) {
+        if (!kdMessages) return;
+        const msgDiv = document.createElement("div");
+        msgDiv.className = `kd-msg ${sender}`;
+        const bubble = document.createElement("div");
+        bubble.className = "kd-msg-bubble";
+        const p = document.createElement("p");
+        p.innerText = text;
+        bubble.appendChild(p);
+        msgDiv.appendChild(bubble);
+        kdMessages.appendChild(msgDiv);
+        kdMessages.scrollTop = kdMessages.scrollHeight;
+      }
+
+      function processKdQuery(query) {
+        addKdMessage(query, "user");
+        setTimeout(() => {
+          const qLower = query.toLowerCase();
+          let reply =
+            'Namaste! For comprehensive Kumbh guidance, please explore our "Plan Your Visit" section or reach out to the District Helpline at 0253-2317151.';
+          if (
+            qLower.includes("snan") ||
+            qLower.includes("date") ||
+            qLower.includes("calendar")
+          ) {
+            reply = kdResponses["shahi snan dates"];
+          } else if (
+            qLower.includes("stay") ||
+            qLower.includes("hotel") ||
+            qLower.includes("camp") ||
+            qLower.includes("dharamshala")
+          ) {
+            reply = kdResponses["where to stay"];
+          } else if (
+            qLower.includes("reach") ||
+            qLower.includes("ramkund") ||
+            qLower.includes("ghat") ||
+            qLower.includes("route") ||
+            qLower.includes("transport")
+          ) {
+            reply = kdResponses["how to reach ramkund"];
+          } else if (
+            qLower.includes("helpline") ||
+            qLower.includes("emergency") ||
+            qLower.includes("police") ||
+            qLower.includes("sos") ||
+            qLower.includes("number")
+          ) {
+            reply = kdResponses["helpline numbers"];
+          }
+          addKdMessage(reply, "bot");
+        }, 350);
+      }
+
+      if (kdForm) {
+        kdForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const val = kdInput.value.trim();
+          if (val) {
+            processKdQuery(val);
+            kdInput.value = "";
+          }
+        });
+      }
+
+      document.querySelectorAll(".kd-chip").forEach((chip) => {
+        chip.addEventListener("click", () => {
+          const q = chip.dataset.query || chip.innerText;
+          processKdQuery(q);
+        });
+      });
+      document
+        .querySelectorAll(".sitemap-links a")
+        .forEach((link) =>
+          link.addEventListener("click", () =>
+            document.getElementById("sitemap-dialog").close(),
+          ),
+        );
+      const filmDialog = document.getElementById("film-dialog");
+      const planDialog = document.getElementById("plan-dialog");
+      const film = filmDialog.querySelector("video");
+      function openFilm(source = "video1.mp4") {
+        if (film.getAttribute("src") !== source) {
+          film.src = source;
+          film.load();
+        }
+        filmDialog.showModal();
+        film.play().catch(() => {});
+      }
+      document
+        .querySelectorAll("[data-video]")
+        .forEach((button) =>
+          button.addEventListener("click", () =>
+            openFilm(button.dataset.video || "video1.mp4"),
+          ),
+        );
+      document
+        .querySelectorAll("[data-plan]")
+        .forEach((button) =>
+          button.addEventListener("click", () => planDialog.showModal()),
+        );
+      document.querySelectorAll("dialog").forEach((dialog) => {
+        dialog
+          .querySelector(".close")
+          .addEventListener("click", () => dialog.close());
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) {
+            const r = dialog.getBoundingClientRect();
+            if (
+              event.clientX < r.left ||
+              event.clientX > r.right ||
+              event.clientY < r.top ||
+              event.clientY > r.bottom
+            )
+              dialog.close();
+          }
+        });
+      });
+      filmDialog.addEventListener("close", () => film.pause());
+      const panels = [
+        ["menu-toggle", "site-menu"],
+        ["search-toggle", "search-form"],
+      ];
+      function closePanels() {
+        panels.forEach(([b, p]) => {
+          document.getElementById(p).hidden = true;
+          document.getElementById(b).setAttribute("aria-expanded", "false");
+        });
+      }
+      panels.forEach(([b, p]) => {
+        document.getElementById(b).addEventListener("click", () => {
+          const panel = document.getElementById(p),
+            opening = panel.hidden;
+          closePanels();
+          panel.hidden = !opening;
+          document
+            .getElementById(b)
+            .setAttribute("aria-expanded", String(opening));
+          if (opening && p === "search-form")
+            document.getElementById("search").focus();
+        });
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closePanels();
+      });
+      document
+        .getElementById("search-form")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          const query = document
+            .getElementById("search")
+            .value.trim()
+            .toLowerCase();
+          if (!query) return;
+          if (/story|video|film|कहानी|वीडियो|फ़िल्म|फिल्म/.test(query))
+            openFilm();
+          else if (
+            /plan|pilgrim|travel|nashik|योजना|तीर्थ|यात्रा|नाशिक|नासिक/.test(
+              query,
+            )
+          )
+            planDialog.showModal();
+          else
+            window.updateSearchResult(
+              document
+                .querySelector("main")
+                .textContent.toLowerCase()
+                .includes(query),
+            );
+        });
+    </script>
+    <script defer src="new-page-accessibility.js"></script>
+    <script defer src="new-page-search.js"></script>
+    <script defer src="new-page-i18n.js"></script>
+    <script defer src="new-page-ceremonies.js"></script>
+    <script defer src="new-page-news.js"></script>
+    <!-- Animation libs: loaded async, animations.js waits for them via guards -->
+    <script
+      src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script defer src="new-page-scroll.js"></script>
+    <script defer src="new-page-animations.js"></script>
+  </body>
 </html>
