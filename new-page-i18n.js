@@ -1,6 +1,13 @@
 // Keep translations in a UTF-8 file so Devanagari text survives editing on Windows.
 (() => {
   const translations = {
+    'Pilgrimage highlights ticker': 'तीर्थयात्रा की झलकियों की चलती पट्टी',
+    'Pause scrolling text': 'चलते पाठ को रोकें',
+    'A Journey of Faith': 'आस्था की यात्रा',
+    'Nashik - Trimbakeshwar': 'नाशिक - त्र्यंबकेश्वर',
+    'Sacred Traditions': 'पावन परंपराएँ',
+    'On the Banks of the Godavari': 'गोदावरी के पावन तट पर',
+    'One Timeless Gathering': 'एक शाश्वत समागम',
     'Government of Maharashtra': 'महाराष्ट्र शासन',
     'Last Updated:': 'अंतिम अपडेट:',
     '30 Sep 2026': '३० सितंबर २०२६',

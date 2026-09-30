@@ -42,8 +42,6 @@ div[style*="netlify"] {
   overflow: hidden !important;
 }
 
-
-
 button {
   cursor: pointer;
 }
@@ -127,9 +125,9 @@ input:focus-visible {
 
 h1 {
   font-size: clamp(44px, 5.2vw, 75px);
-  line-height: 1.195;
+  line-height: 1.05;
   letter-spacing: -0.025em;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 0 24px;
 }
 
@@ -224,10 +222,12 @@ h1 span {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-      #c2875a15 0%,
-      #a6473438 40%,
-      #740b09df 100%);
+  background: linear-gradient(
+    180deg,
+    #c2875a15 0%,
+    #a6473438 40%,
+    #740b09df 100%
+  );
   pointer-events: none;
 }
 
@@ -916,7 +916,7 @@ html:lang(hi) .ceremonies-intro {
   letter-spacing: -0.025em;
 }
 
-.highlights-heading>p:last-child {
+.highlights-heading > p:last-child {
   margin: 0 auto;
   max-width: 840px;
   font-size: clamp(10px, 1.05vw, 15px);
@@ -941,7 +941,7 @@ html:lang(hi) .ceremonies-intro {
   color: #fff;
 }
 
-.highlight-card>img {
+.highlight-card > img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -954,11 +954,13 @@ html:lang(hi) .ceremonies-intro {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(180deg,
-      #18120a25 0%,
-      #18120a00 30%,
-      #17140f50 55%,
-      #17140fed 100%);
+  background: linear-gradient(
+    180deg,
+    #18120a25 0%,
+    #18120a00 30%,
+    #17140f50 55%,
+    #17140fed 100%
+  );
   pointer-events: none;
 }
 
@@ -1023,7 +1025,7 @@ html:lang(hi) .highlight-card {
     margin-bottom: 24px;
   }
 
-  .highlights-heading>p:last-child {
+  .highlights-heading > p:last-child {
     font-size: 12px;
   }
 
@@ -1173,7 +1175,7 @@ html:lang(hi) .highlight-card {
   display: none;
 }
 
-.number-footfall>img {
+.number-footfall > img {
   position: absolute;
   z-index: -2;
   inset: 0;
@@ -1287,7 +1289,7 @@ html:lang(hi) .number-label {
   color: #fff;
 }
 
-.city-card>img {
+.city-card > img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1300,10 +1302,12 @@ html:lang(hi) .number-label {
   position: absolute;
   z-index: 0;
   inset: 0;
-  background: linear-gradient(180deg,
-      #24100600 25%,
-      #48161225 48%,
-      #761512e8 100%);
+  background: linear-gradient(
+    180deg,
+    #24100600 25%,
+    #48161225 48%,
+    #761512e8 100%
+  );
   pointer-events: none;
 }
 
@@ -1414,7 +1418,7 @@ html:lang(hi) .city-tags li {
   --bs-gutter-y: 30px;
 }
 
-.story-card>img {
+.story-card > img {
   display: block;
   width: 100%;
   height: auto;
@@ -1580,7 +1584,7 @@ html:lang(hi) .story-details summary {
   background: linear-gradient(160deg, #fff 40%, #fffaf2 72%, #fae6c5 100%);
 }
 
-.news-item+.news-item {
+.news-item + .news-item {
   border-top: 1px solid #e7e1d580;
 }
 
@@ -1817,7 +1821,7 @@ html:lang(hi) .news-filter {
   line-height: 1.8;
 }
 
-.help-tips li+li {
+.help-tips li + li {
   margin-top: 10px;
 }
 
@@ -1885,10 +1889,12 @@ html:lang(hi) .help-links button {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(180deg,
-      #7b382d22 0%,
-      #5b251a33 35%,
-      #711210d9 100%);
+  background: linear-gradient(
+    180deg,
+    #7b382d22 0%,
+    #5b251a33 35%,
+    #711210d9 100%
+  );
 }
 
 .pilgrimage-banner-eyebrow {
@@ -2156,7 +2162,7 @@ html:lang(hi) .control-label {
 }
 
 /* All page edges follow the same Bootstrap container breakpoints. */
-.hero>.container>.row {
+.hero > .container > .row {
   row-gap: 30px;
 }
 
@@ -2196,7 +2202,7 @@ html:lang(hi) .control-label {
 .sacred-journey h2 {
   margin: 0 0 26px;
   font-size: 3.8em;
-  line-height: 1.23;
+  line-height: 1.15;
   font-weight: 500;
   letter-spacing: -0.025em;
 }
@@ -2407,7 +2413,7 @@ html:lang(hi) .sacred-journey h2 {
   margin-top: 22px;
 }
 
-.search-suggestions>p {
+.search-suggestions > p {
   margin: 0 0 10px;
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -2502,11 +2508,13 @@ html:lang(hi) #search-form label {
   z-index: 1;
   pointer-events: none;
   opacity: 0;
-  background: linear-gradient(110deg,
-      transparent 25%,
-      #ffe8bb08 40%,
-      #fff4d54d 50%,
-      transparent 65%);
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    #ffe8bb08 40%,
+    #fff4d54d 50%,
+    transparent 65%
+  );
   mix-blend-mode: screen;
 }
 
@@ -2531,11 +2539,13 @@ html:lang(hi) #search-form label {
   inset: -20%;
   pointer-events: none;
   opacity: 0;
-  background: linear-gradient(110deg,
-      transparent 25%,
-      #ffeac830 45%,
-      #fff4da80 52%,
-      transparent 72%);
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    #ffeac830 45%,
+    #fff4da80 52%,
+    transparent 72%
+  );
   mix-blend-mode: screen;
 }
 
@@ -2616,7 +2626,7 @@ html:lang(hi) #search-form label {
   border: 0;
 }
 
-.accessibility-icon+.accessibility-icon {
+.accessibility-icon + .accessibility-icon {
   border-left: 1px solid #ffffff55;
 }
 
@@ -2630,7 +2640,7 @@ html:lang(hi) #search-form label {
   stroke-linejoin: round;
 }
 
-.accessibility-icon>span {
+.accessibility-icon > span {
   font-size: 15px;
   line-height: 1;
 }
@@ -2686,7 +2696,7 @@ html:lang(hi) #search-form label {
   font-size: 13px;
 }
 
-.accessibility-settings>button {
+.accessibility-settings > button {
   display: block;
   width: 100%;
   margin-top: 8px;
@@ -2704,7 +2714,7 @@ html:lang(hi) #search-form label {
 
 .high-contrast body,
 .high-contrast header,
-.high-contrast main>section,
+.high-contrast main > section,
 .high-contrast footer,
 .high-contrast .panel,
 .high-contrast dialog,
@@ -2790,13 +2800,16 @@ html:lang(hi) #search-form label {
    ========================================================================== */
 .sticky-right-panel {
   position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+  top: 80%;
+  right: 0px;
+  transform: translateY(-50%) scale(0.85);
+  transform-origin: right center;
   z-index: 1040;
   background: #ffffff;
   border-radius: 42px;
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.09), 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 8px 26px rgba(0, 0, 0, 0.09),
+    0 2px 8px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(226, 216, 202, 0.6);
   display: flex;
   flex-direction: column;
@@ -2804,11 +2817,15 @@ html:lang(hi) #search-form label {
   padding: 18px 8px;
   width: 84px;
   gap: 10px;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease;
 }
 
 .sticky-right-panel:hover {
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14), 0 4px 10px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.14),
+    0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 .sticky-panel-item {
@@ -2844,7 +2861,7 @@ html:lang(hi) #search-form label {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
 }
@@ -3179,7 +3196,7 @@ html:lang(hi) #search-form label {
   .sticky-icon-wrapper {
     width: 40px;
     height: 40px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
   }
 
   .sticky-icon-wrapper svg {
@@ -3202,25 +3219,52 @@ html:lang(hi) #search-form label {
     padding: 12px 4px;
     width: 66px;
     border-radius: 32px;
-    gap: 6px;
+    gap: 3px;
   }
 
   .sticky-icon-wrapper {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     margin-bottom: 2px;
   }
 
   .sticky-icon-wrapper svg {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
   }
 
   .sticky-label {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .sticky-sublabel {
-    font-size: 8.5px;
+    font-size: 8px;
   }
+}
+
+/* Continuous pilgrimage ticker below the hero. */
+.pilgrimage-ticker { position: relative; overflow: hidden; background: #681212; color: #fff3df; padding-block: 17px; }
+.ticker-viewport { overflow: hidden; margin-right: 58px; mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
+.ticker-track { display: flex; width: max-content; animation: pilgrimage-marquee 35s linear infinite; }
+.ticker-group { display: flex; align-items: center; flex-shrink: 0; gap: 36px; padding-right: 36px; min-width: 100vw; justify-content: space-around; }
+.ticker-item { white-space: nowrap; font-size: clamp(14px, 1.3vw, 19px); font-weight: 500; line-height: 1.7; letter-spacing: .045em; }
+.ticker-separator { color: #f5b76e; font-size: 18px; line-height: 1; }
+.pilgrimage-ticker::before, .pilgrimage-ticker::after { content: ''; position: absolute; z-index: 1; top: 0; bottom: 0; width: clamp(35px, 7vw, 110px); pointer-events: none; backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); }
+.pilgrimage-ticker::before { left: 0; background: linear-gradient(90deg, #681212, #68121200); mask-image: linear-gradient(90deg, #000, transparent); }
+.pilgrimage-ticker::after { right: 58px; background: linear-gradient(270deg, #681212, #68121200); mask-image: linear-gradient(270deg, #000, transparent); }
+.ticker-pause { position: absolute; z-index: 2; right: 14px; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 32px; height: 32px; padding: 7px; border: 1px solid #fff3df55; border-radius: 50%; background: #681212; color: #fff3df; }
+.ticker-pause svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.ticker-pause:focus-visible { outline: 2px solid #ffd093; outline-offset: 3px; }
+.ticker-play-icon { display: none; }
+.is-paused .ticker-pause-icon { display: none; }
+.is-paused .ticker-play-icon { display: block; }
+.pilgrimage-ticker:hover .ticker-track, .pilgrimage-ticker:focus-within .ticker-track, .pilgrimage-ticker.is-paused .ticker-track { animation-play-state: paused; }
+html:lang(hi) .ticker-item { letter-spacing: 0; }
+@keyframes pilgrimage-marquee { to { transform: translateX(-50%); } }
+@media (max-width: 575.98px) { .pilgrimage-ticker { padding-block: 13px; } .ticker-group { gap: 24px; padding-right: 24px; } }
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; width: auto; }
+  .ticker-viewport { margin-right: 0; mask-image: none; -webkit-mask-image: none; }
+  .ticker-group { min-width: 0; flex: 1; flex-wrap: wrap; padding: 0 20px; gap: 10px 18px; }
+  .ticker-group[aria-hidden="true"], .ticker-pause, .pilgrimage-ticker::before, .pilgrimage-ticker::after { display: none; }
 }
